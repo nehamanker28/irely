@@ -1,0 +1,4 @@
+C:\ProgramData\PostSharp\5.0.41\bin.Release\PostSharp.Compiler.Engine.dll
+C:\+Git\i21_mobilebilling\server\postsharp.config
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.BRL\postsharp.config
+C:\+Git\i21_mobilebilling\server\packages\PostSharp.Patterns.Diagnostics.5.0.41\tools\PostSharp.Patterns.Diagnostics.Weaver.dll

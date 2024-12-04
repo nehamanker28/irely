@@ -1,0 +1,8 @@
+{
+  "name": "Mobile_Billing",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "6dbb8235"
+}

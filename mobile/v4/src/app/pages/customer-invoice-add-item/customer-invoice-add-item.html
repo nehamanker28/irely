@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="white" class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-8 style="margin-right: 5px;">
+          <ion-searchbar [(ngModel)]="searchValue" large (ionInput)="loadItemQuery()"></ion-searchbar>
+        </ion-col>
+        <ion-col col-auto></ion-col>
+        <ion-col col-3.5>
+          <button ion-button block large primary (click)="addItem()" class="button-global"> Ok </button>          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-row>
+        <ion-col col-4>
+          Item Number          
+        </ion-col>
+        <ion-col col-4>
+          Item Description
+        </ion-col>
+        <ion-col col-4>
+          Price
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let item of data; let i=index" radio-group [(ngModel)]="data['ysnSelected']">
+        <ion-col col-4>
+          <ion-item>
+            <ion-checkbox color="primary" [(ngModel)]="item['ysnSelected']" (click)="selectItem(item)"></ion-checkbox>
+            <ion-label>{{item.strItemNo}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label>{{item.strDescription}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-4>
+          <ion-item>
+            <ion-label>{{item.dblSalePrice}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+</ion-content>

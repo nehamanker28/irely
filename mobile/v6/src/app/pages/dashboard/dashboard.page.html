@@ -1,0 +1,137 @@
+/* eslint-disable @angular-eslint/template/eqeqeq */
+/* eslint-disable @angular-eslint/template/eqeqeq */
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dashboard</ion-title>
+    <ion-button color="primary" (click)="receiveOrder()" fill="outline" slot="end" style="padding-right: 10px;">Refresh
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="">
+  <div class="containerDiv">
+    <ion-grid>
+      <ion-row class="dashboardParentRow">
+        <ion-col class="parentCol" size-lg="6" size-xs="12">
+          <ion-text color="primary">
+            <h4>Deliveries <ion-badge *ngIf = isNewOrder color="warning">New</ion-badge></h4>
+          </ion-text>
+
+          <div class="innerCol">
+            <div class="deliveriesCount">
+              <ion-item (click)="showDeliveries()">
+                <!-- <ion-icon name="pin" slot="start"></ion-icon> -->
+                <ion-label>Number of Deliveries</ion-label>
+               
+                <!-- <ion-label>Number of Deliveries <ion-badge *ngIf = isNewOrder color="warning">New</ion-badge></ion-label> -->
+                <h3><u>{{data.length}}</u></h3>
+               
+                <ion-icon name="chevron-forward-outline" slot="end" size="large" color="primary"> </ion-icon>
+                
+              </ion-item>
+            </div>
+            <div class="NoOrderMessageContainer" *ngIf="!data?.length">
+              
+                <ion-icon name="bag-remove-outline" text-center></ion-icon>
+                <span>No Orders for Today</span>
+             
+
+            </div>
+
+            <div class="nextOnRouteDiv" *ngIf="data?.length">
+              <ion-label class="nextRouteLabel"><u><b>Next on Route:</b></u></ion-label>
+              <ion-row>
+                <ion-col *ngFor="let item of data | slice:0:2 ; let i=index">
+                  <ion-card #slidingItem [attr.track]="item.strOrderStatus | lowercase"
+                    (click)="showOrderDetails(item)">
+                    <ion-item style="margin-right:10px;" class="item.strOrderStatus | lowercase">
+                      <ion-card-header>
+                        <ion-card-subtitle>
+                          <b>{{item.strOrderNumber}} &mdash; {{item.strCustomerName}} &mdash;
+                            {{item.strCustomerNumber}}</b>
+                        </ion-card-subtitle>
+                      </ion-card-header>
+                    </ion-item>
+                    <ion-card-content class="routeDescCard">
+                      <ion-label class="routeDescName">Site Description : {{item.strOrderNumber}}</ion-label>
+                      <ion-label>Site Address : {{item.strSiteAddress}}, {{item.strCity}}, {{item.strState}},
+                        {{item.strZipCode}}</ion-label>
+                      <ion-label>Item:{{item.strItemNo}} - Quantity:{{item.dblQuantity}}</ion-label>
+                    </ion-card-content>
+                  </ion-card>
+                </ion-col>
+              </ion-row>
+            </div>
+            <div class="lastSyncLabel">
+              <ion-label>{{lastTimeDiffrence}}</ion-label>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col class="parentCol" size-lg="6" size-xs="12">
+          <ion-text color="primary">
+            <h4>Current Inventory</h4>
+          </ion-text>
+          <div class="innerCol">
+            <div class="NoOrderMessageContainer1" *ngIf="!dataLoadInventory?.length">
+              <br><br>
+              
+                <ion-icon name="trash-bin-outline" text-center></ion-icon>
+                <span>Inventory is Empty</span>
+              
+            </div>
+            
+            <ion-row *ngIf="dataLoadInventory?.length">
+              <ion-col *ngFor="let item of dataLoadInventory; let i=index;">
+                
+                  <div class="quantityContainer"><span>{{item.dblQuantity}}</span><span>Gal</span></div>
+                 
+                <div id="banner">
+                  <div class="progress progress-bar-vertical">
+                   
+                    <div class="progress-bar inventoryCylinder{{i+1}}" role="progressbar" aria-valuenow="30"  
+                      aria-valuemin="0" aria-valuemax="100"
+                      [ngStyle]="{'height':item.dblBalance/item.dblQuantity*100+ '%'}"> 
+                      <span style="transform: rotate(-90deg); color: chartreuse; position: absolute; bottom: 50%; font-weight: bold;">{{item.dblBalance}} gal</span>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="inventoryDescContainer container{{i+1}}" style="margin: auto;display: table;">
+                 
+                    <ion-icon name="radio-button-on-outline" style="margin: auto;"></ion-icon>
+                    <span class="Desc">{{item.strDescription}}</span>
+                 
+                </div>
+              </ion-col>
+            </ion-row>
+           
+            <div *ngIf="dataLoadInventory?.length">
+              <ion-row style="margin-top: 20px;">
+                <ion-row>
+                <ion-icon name="radio-button-on-outline" style="color: crimson;margin-top: 2px;"></ion-icon>
+                <span class="Desc" style="margin-right: 30px;">Starting Inventory</span>
+                </ion-row>
+                <ion-row>
+                <ion-icon name="radio-button-on-outline" style="margin-top: 2px;color: chartreuse;"></ion-icon>
+                <span class="Desc">Current Inventory</span>
+               </ion-row>
+              </ion-row>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+      </ion-row>
+
+
+    </ion-grid>
+  </div>
+</ion-content>

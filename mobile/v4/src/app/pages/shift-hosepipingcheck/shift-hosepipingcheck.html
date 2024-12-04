@@ -1,0 +1,329 @@
+<ion-header>  
+  <ion-toolbar color="white" class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row justify-content-start>
+        <ion-col col-5 style="margin-right: 5px; color: black">
+          <ion-item>
+            <b>Hose Assembly Identification Number: &nbsp; {{data['strHoseAssemblyNumber']}}</b>
+          </ion-item>
+        </ion-col>
+        <ion-col col-3.5 style="color: black">
+            <ion-item>
+              <b>Truck / Tank Number: &nbsp; {{data['strTruckNumber']}}</b>
+            </ion-item>
+          </ion-col>
+        <ion-col col-auto></ion-col>
+        <ion-col col-3 style="margin-right: 5px;">
+          <button ion-button block large primary (click)="save(data)" class="button-global">Save</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Damage to the hose cover that exposes the reinforcement</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck1']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Wire braid reinforcement that has been kinked or flattened</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck2']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Soft spots when under pressure</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck3']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Bulging spots when under pressure</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck4']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Loose outer covering</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck5']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Damaged, Slipping or excessively worn hose couplings</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck6']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Loose, serverly corroded or missing bolts or fastening on bolted hose coupling assemblies</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck7']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Weather cracks on hose</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck8']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Cracks or severe damage on liquid hose end delivery nozzle coupler</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck9']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Piping or joints that are severely corroded</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck10']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Any external leak indentifiable without the use of instruments (value, seal, connection failure)</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck11']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Bolts loose, missing, or severely corroded</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck12']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Rubber hose flexible connectors with any condition as outlined above for hose assemblies</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck13']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Stainless steel flexible connectors with damaged reinforced braid</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck14']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Manual stop valves (ESV-Emergency Shutoff Valves) that will not actuate</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck15']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Failure to close, or leakage through the internal self-closing stop valve. Detectable without the use of instruments</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck16']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Fusible elements missing or damaged</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck17']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Test all emergency discharge control devices designed to close the internal self-closing stop valve, to assure that all linkages <br> to the valve operate as intended</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item style="height: 100%;">
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck18']" ></ion-checkbox>
+          <br>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Tank tie down bolts to chassis secured and not rusted</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck19']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>While truck is shut off, lubricate PTO drive line</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck20']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Product decals and placards clean and visible on all 4 sides</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck21']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Liquid and Vapor lines and valves clearly marked</ion-label>              
+        </ion-item>                                        
+      </ion-col>        
+      <ion-col col-2>
+        <ion-item>
+          <ion-label>Defects</ion-label>
+          <ion-checkbox color="primary" [(ngModel)]="data['ysnCheck22']" ></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col style="height: 0px;">
+        <ion-item>
+          <ion-label stacked>Comments</ion-label>
+          <ion-input type="text" style="border-color: black; border-style: dashed;" [(ngModel)]="data['strComments']"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>       
+    <ion-row>
+      <br><br><br><br>
+    </ion-row>
+    <ion-row>
+      <br><br><br><br>
+    </ion-row>
+  </ion-grid>
+</ion-content>

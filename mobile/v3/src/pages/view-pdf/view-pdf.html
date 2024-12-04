@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar color="white" class="my-toolbar box-shadow" >
+      <ion-grid no-padding>
+        <ion-row large>
+          <!-- <ion-col col-3 style="padding: 5px 0px 5px 0px">
+            <ion-item>
+              <ion-label><b>Report Type</b></ion-label>
+            </ion-item>
+          </ion-col> -->
+          <ion-col col-10 style="padding: 5px 0px 5px 0px">
+            <ion-item>
+              <ion-label><b>File Name</b></ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col col-auto></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>  
+  </ion-header>
+
+<ion-content padding>       
+  <ion-list >
+
+    <ion-row *ngFor="let item of data" style="border-bottom:1px;border-bottom-style:solid;border-bottom-color: lightgray;">
+      <!-- <ion-col col-3 style="padding: 5px 0px 5px 0px" (click)='openPDF(item)'>
+        <ion-item>
+          <ion-label>{{item.type}}</ion-label>
+        </ion-item>
+      </ion-col> -->
+      <ion-col col-10 style="padding: 5px 0px 5px 0px" (click)='openPDF(item)'>
+        <ion-item>
+          <ion-label>{{item.filename}}</ion-label>
+        </ion-item>
+      </ion-col> 
+      <ion-col col-2 >
+        <ion-item>
+          <button ion-button block outline item-end icon-left style="padding: 5px 0px 5px 0px" (click)="deleteReport(item)" *ngIf="item.visible === 'true'">
+            <ion-icon name="ios-close"></ion-icon>
+            Delete
+          </button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

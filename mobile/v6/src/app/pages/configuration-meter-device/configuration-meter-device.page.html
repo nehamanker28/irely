@@ -1,0 +1,135 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Meter Devices</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>  
+  <ion-list padding>
+    <!-- <ion-button ion-button expand="block" (click)="scanDevices()">SCAN</ion-button> -->
+    <ion-list-header style="font-weight: bolder;">
+      Paired Devices
+    </ion-list-header>
+    <ion-grid no-padding>    
+      <ion-row justify-content-start *ngFor="let device of pairedDevices; let i=index">   
+        <ion-col size="2">
+          <ion-button ion-button expand="block" (click)="disconnectDevice(device)" *ngIf="device.ysnConnected === 'true'">Disconnect</ion-button>  
+          <ion-button ion-button expand="block" (click)="connectDevice(device)" *ngIf="device.ysnConnected != 'true'">Connect</ion-button>  
+        </ion-col>
+        <ion-col size="3" text-left style="margin: auto;">
+          <label style="color: black; text-align: left;" text-left>{{device.name}}</label>
+        </ion-col>
+        <ion-button ion-button expand="block" (click)="assignToMeter(1, device)" *ngIf="device.ysnConnected === 'true'">Assign to Meter #1</ion-button>  
+        <ion-button ion-button expand="block" (click)="assignToMeter(2, device)" *ngIf="device.ysnConnected === 'true'">Assign to Meter #2</ion-button>  
+        <ion-col></ion-col> 
+      </ion-row>
+    </ion-grid>
+    <!-- <ion-list-header style="font-weight: bolder;">
+      Availlable Devices
+    </ion-list-header>
+    <ion-item *ngFor='let device of unpairedDevices' (click)="connectDevice(device)">
+      <span>
+        {{device.name}}
+      </span>
+    </ion-item> -->
+
+    <br>
+    <ion-spinner style="align-items: center;" name="crescent" *ngIf="gettingDevices"></ion-spinner>
+    <br>
+
+
+    <ion-list-header style="font-weight: bolder;">
+      METER #1 : {{meter_1_bluetooth_name}}
+    </ion-list-header>
+    <ion-grid no-padding>    
+      <ion-row justify-content-start>   
+        <ion-col size="3">
+          <ion-button ion-button expand="block" (click)="setNodeAddress(1)" [disabled]="meter_1_bluetooth_name == ''">SET NODE ADDRESS</ion-button>  
+        </ion-col>
+        <ion-col size="3" text-left style="margin: auto;">
+          <ion-input type="number" [(ngModel)]="meter_1_node_address"></ion-input>
+        </ion-col>
+        <ion-col></ion-col> 
+      </ion-row>      
+      <ion-row justify-content-start>   
+        <ion-col size="3">
+          <ion-button ion-button expand="block" (click)="getGetPresetType(1)" [disabled]="meter_1_bluetooth_name == ''">TEST CONNECTION</ion-button>  
+        </ion-col>
+        <ion-col text-left *ngIf="!meter_1_test_status.includes('DISCONNECTED')" style="margin: auto; color: green;">
+          <ion-input readonly="true" [(ngModel)]="meter_1_test_status"></ion-input>
+        </ion-col>
+        <ion-col size="3" text-left *ngIf="meter_1_test_status.includes('DISCONNECTED')" style="margin: auto; color: red;">
+          <ion-input readonly="true" [(ngModel)]="meter_1_test_status"></ion-input>
+        </ion-col>
+        <ion-col></ion-col> 
+      </ion-row>
+      <!-- <ion-row justify-content-start>   
+        <ion-col size="3">
+          <ion-button ion-button expand="block" (click)="getGetPresetType(1)" [disabled]="meter_1_bluetooth_name == ''">GET PRESET TYPE</ion-button>  
+        </ion-col>
+        <ion-col text-left *ngIf="meter_1_test_preset_type != ''" style="margin: auto; color: green;">
+          <ion-input readonly="true" [(ngModel)]="meter_1_test_preset_type"></ion-input>
+        </ion-col>
+        <ion-col></ion-col> 
+      </ion-row> -->
+    </ion-grid>
+    <ion-list-header style="font-weight: bolder;">
+      METER #2 : {{meter_2_bluetooth_name}}
+    </ion-list-header>
+    <ion-grid no-padding>    
+      <ion-row justify-content-start>   
+        <ion-col size="3">
+          <ion-button ion-button expand="block" (click)="setNodeAddress(2)" [disabled]="meter_2_bluetooth_name == ''">SET NODE ADDRESS</ion-button>  
+        </ion-col>
+        <ion-col size="3" text-left style="margin: auto;">
+          <ion-input type="number" [(ngModel)]="meter_2_node_address"></ion-input>
+        </ion-col>
+        <ion-col></ion-col> 
+      </ion-row>     
+      <ion-row justify-content-start>   
+        <ion-col size="3">
+          <ion-button ion-button expand="block" (click)="getGetPresetType(2)" [disabled]="meter_2_bluetooth_name == ''">TEST CONNECTION</ion-button>  
+        </ion-col>
+        <ion-col text-left *ngIf="!meter_2_test_status.includes('DISCONNECTED')" style="margin: auto; color: green;">
+          <ion-input readonly="true" [(ngModel)]="meter_2_test_status"></ion-input>
+        </ion-col>
+        <ion-col size="3" text-left *ngIf="meter_2_test_status.includes('DISCONNECTED')" style="margin: auto; color: red;">
+          <ion-input readonly="true" [(ngModel)]="meter_2_test_status"></ion-input>
+        </ion-col>        
+        <ion-col></ion-col> 
+      </ion-row>
+      <!-- <ion-row justify-content-start>   
+        <ion-col size="3">
+          <ion-button ion-button expand="block" (click)="getGetPresetType(2)" [disabled]="meter_2_bluetooth_name == ''">GET PRESET TYPE</ion-button>  
+        </ion-col>
+        <ion-col text-left *ngIf="meter_2_test_preset_type != ''" style="margin: auto; color: green;">
+          <ion-input readonly="true" [(ngModel)]="meter_2_test_preset_type"></ion-input>
+        </ion-col>
+        <ion-col></ion-col> 
+      </ion-row> -->
+    </ion-grid>
+
+    
+
+    <!-- <ion-input type="number" [(ngModel)]="grossqty"></ion-input>
+    <ion-button ion-button expand="block" (click)="setGrossData()">SEND GROSS VALUE</ion-button>
+    <ion-button ion-button expand="block" (click)="test_dynamic()">SEND TEST VALUE</ion-button>
+    <ion-button ion-button expand="block" (click)="getMeterData()">Test Meter Value</ion-button>
+    <ion-button ion-button expand="block" (click)="stopMeterData()">STOP</ion-button>    
+    <ion-item *ngFor='let item of resultMeterValue'>
+      <span>
+        {{item}}
+      </span>
+    </ion-item>
+    <ion-button ion-button expand="block" (click)="getMeterStatus()">Test Meter Status</ion-button>
+    <ion-item *ngFor='let item of resultMeterStatus'>
+      <span>
+        {{item}}
+      </span>
+    </ion-item> -->
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,123 @@
+<ion-header>
+  <ion-toolbar color="white" class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-10></ion-col>
+        <ion-col col-2 end>
+          <button ion-button block large primary (click)="save()" class="button-global">Save</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label stacked style="width: 300px !important">Customer No</ion-label>
+                  <ion-input type="text" [(ngModel)]="outOfGas['strCustomerNo']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label stacked style="width: 300px !important">Full Name</ion-label>
+                  <ion-input type="text" [(ngModel)]="outOfGas['strCustomerName']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label stacked style="width: 300px !important">Site No</ion-label>
+                  <ion-input type="text" [(ngModel)]="outOfGas['strSiteNo']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label stacked style="width: 300px !important">Site Description</ion-label>
+                  <ion-input type="text" [(ngModel)]="outOfGas['strSiteDescription']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label stacked style="width: 300px !important">Serial No</ion-label>
+                  <ion-input type="text" [(ngModel)]="outOfGas['strSerialNo']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label stacked style="width: 300px !important">Capacity</ion-label>
+                  <ion-input type="text" [(ngModel)]="outOfGas['dblCapacity']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col col-6>
+                <ion-item class="control-disabled">
+                  <ion-label stacked style="width: 300px !important">Tank Description</ion-label>
+                  <ion-input type="text" [(ngModel)]="outOfGas['strTankDescription']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label>Leak Test Status:</ion-label>
+                  <ion-select #type clearInput interface="popover" [(ngModel)]="outOfGas['strLeakTestStatus']"> 
+                    <ion-option>Passed</ion-option>
+                    <ion-option>Failed</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label style="width: 170px !important">Pressure Reading:</ion-label>
+                  <ion-input type="number" class="editable-input" (ionFocus)="clearInputValue($event)" (keyup.enter)="hideKeyboard()" [(ngModel)]="outOfGas['dblPressureReading']"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label style="width: 150px !important">Minutes Held:</ion-label>
+                  <ion-input type="number" [(ngModel)]="outOfGas['dblMinutesHeld']" ></ion-input>
+                </ion-item>
+              </ion-col>
+                <ion-col>
+                  <ion-item>
+                    <ion-label style="width: 120px !important">Tagged and Locked</ion-label>
+                    <ion-checkbox color="danger" [(ngModel)]="outOfGas['ysnTaggedLocked']"></ion-checkbox>
+                  </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label style="width: 120px !important">Customer Notified</ion-label>
+                  <ion-checkbox color="danger" [(ngModel)]="outOfGas['ysnCustomerNotified']"></ion-checkbox>
+                </ion-item>
+              </ion-col>
+                <ion-col>
+                  <ion-item>
+                    <ion-label style="width: 120px !important">Appliances Lit</ion-label>
+                    <ion-checkbox color="danger" [(ngModel)]="outOfGas['ysnAppliancesLit']"></ion-checkbox>
+                  </ion-item>
+              </ion-col>
+            </ion-row>           
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label style="width: 120px !important">Notes:</ion-label>
+                  <ion-input type="text" [(ngModel)]="outOfGas['strNotes']"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row> 
+          </ion-grid>
+        </ion-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

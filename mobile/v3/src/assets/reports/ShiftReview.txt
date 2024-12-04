@@ -1,0 +1,191 @@
+var dd = {
+      footer: function(currentPage, pageCount) {
+        return {
+            columns: [
+                {
+                    text: [
+                        {
+                            text: 'Page ' + currentPage.toString() + ' of ' + pageCount,
+                        }
+                    ],
+                    margin: [0, 0, 35, 0],
+                    alignment: 'right'
+                }
+            ]
+        };
+      },
+      content: [
+        { text: 'Driver\'s Shift Report', style: 'header' },    
+        {
+			style: 'tableExample',
+			color: '#444',
+			table: {
+				widths: [40, '*', 40, 118, 40, 40],
+				body: [
+					[{text: 'Driver:', alignment: 'left', style: 'tableHeader'}, {text: '024 Jim Johnson', alignment: 'left'}, {text: 'Date:', alignment: 'left', style: 'tableHeader'}, {text: '11/27/2017', alignment: 'left'}, {text: 'Shift:', alignment: 'left', style: 'tableHeader'}, {text: '1', alignment: 'left'}]
+				]
+			},
+			layout: 'noBorders'
+		},
+		{text: '\n'},
+		{
+			style: 'tableExample',
+			color: '#444',
+			table: {
+				widths: [70, 80, 80, 80, 5, 65, 25, '*'],
+				headerRows: 1,
+				body: [
+					[{text: '', alignment: 'left', style: 'tableHeader'}, {text: 'Start', alignment: 'left', style: 'tableHeader'}, {text: 'End', alignment: 'left', style: 'tableHeader'}, {text: 'Diff', alignment: 'left', style: 'tableHeader'},'','',{text: 'No.', alignment: 'left', style: 'tableHeader'},{text: 'Amount', alignment: 'left', style: 'tableHeader'}],
+					[{text: 'Time:', alignment: 'left', style: 'tableHeader'}, {text: '06:55 AM', alignment: 'left'}, {text: '04:21 PM', alignment: 'left'}, {text: '9:43 hours', alignment: 'left'},'',{text: 'Invoices:', alignment: 'left', style: 'tableHeader'},'6','$2,648.52'],
+					[{text: 'Odometer:', alignment: 'left', style: 'tableHeader'}, {text: '198,658', alignment: 'left'}, {text: '198,773', alignment: 'left'}, {text: '115 miles', alignment: 'left'},'',{text: 'Receipts:', alignment: 'left', style: 'tableHeader'},'2','$882.84'],
+					[{text: 'Meter 1:', alignment: 'left', style: 'tableHeader'}, {text: '5,109,895.70', alignment: 'left'}, {text: '5,113,761.4', alignment: 'left'}, {text: '3,865.7 gals', alignment: 'left'},'','','',''],
+					[{text: 'Meter 2:', alignment: 'left', style: 'tableHeader'}, {text: '5,109,895.701', alignment: 'left'}, {text: '5,113,761.4', alignment: 'left'}, {text: '3,865.7 gals', alignment: 'left'},'','','',''],
+				]
+			},
+			layout: 'noBorders'
+		},
+		{text: '\n'},
+		{text: '\n'},
+		{ text: 'Deliveries by Item', alignment: 'left', style: 'tableHeader', margin: [0, 0, 0, 10], },    
+		{
+			style: 'tableExample',
+			color: '#444',
+			table: {
+				widths: [20, 65, '*', '*', 65, 80],
+				headerRows: 1,
+				body: [
+					[{text: '', alignment: 'left', style: 'tableHeader'}, {text: 'Cust No:', alignment: 'left', style: 'tableHeader'}, {text: 'Name:', alignment: 'left', style: 'tableHeader'}, {text: 'Invoice No.', alignment: 'left', style: 'tableHeader'},{text: 'Quantity', alignment: 'right', style: 'tableHeader'},{text: 'Amount', alignment: 'right', style: 'tableHeader'}],
+				]
+			},
+			layout: 'noBorders'
+		},
+		{canvas: [{ type: 'line', x1: 0, y1: 5, x2: 595-2*40, y2: 5, lineWidth: 1 }]},
+		// ++++++++++++++++++++++++++++++++++
+		// BEGIN - DETAILS SHOULD BE DYNAMIC
+		// ++++++++++++++++++++++++++++++++++
+		{text: 'Item: PRO - Propane Home Use', style: 'tableHeader', margin: [0, 5, 0, 3]},
+		{
+			style: 'tableExample',
+			color: '#444',
+			table: {
+				widths: [20, 65, '*', '*', 65, 80],
+				headerRows: 1,
+				body: [
+					[{text: '', alignment: 'left'}, {text: '00012345', alignment: 'left'}, {text: 'Customer Name #1', alignment: 'left'}, {text: 'SI-M-20171127073012', alignment: 'left'},{text: '257.4', alignment: 'right'},{text: '$441.42', alignment: 'right'}],
+				    [{text: '', alignment: 'left'}, {text: '00012345', alignment: 'left'}, {text: 'Customer Name #1', alignment: 'left'}, {text: 'SI-M-20171127073012', alignment: 'left'},{text: '257.4', alignment: 'right'},{text: '$441.42', alignment: 'right'}],
+				]
+			},
+			layout: 'noBorders'
+		},
+		{
+			style: 'tableExample',
+			color: '#444',
+			table: {
+				widths: [20, 65, '*', '*', 65, 80],
+				headerRows: 1,
+				body: [
+					['','','', {text: 'Item Total:', alignment: 'right', style: 'tableHeader'},{text: 772.4, alignment: 'right', style: 'tableHeader'},{text: '$1,324.26', alignment: 'right', style: 'tableHeader'}],
+				]
+			},
+			layout: 'noBorders'
+		},
+		// ++++++++++++++++++++++++++++++++++
+		// END - DETAILS SHOULD BE DYNAMIC
+		// ++++++++++++++++++++++++++++++++++
+        {canvas: [{ type: 'line', x1: 0, y1: 5, x2: 595-2*40, y2: 5, lineWidth: 1 }]},
+        {
+			style: 'tableExample',
+			color: '#444',
+			margin: [0, 5, 0, 0],
+			table: {
+				widths: [20, 65, '*', '*', 65, 80],
+				headerRows: 1,
+				body: [
+					['','','', {text: 'Total Deliveries:', alignment: 'right', style: 'tableHeader'},'',{text: '$1,324.26', alignment: 'right', style: 'tableHeader'}],
+				]
+			},
+			layout: 'noBorders'
+		},
+		{text: '\n'},
+        {text: '\n'},
+		{ text: 'Payment Receipts', alignment: 'left', style: 'tableHeader', margin: [0, 0, 0, 10] },    
+		{
+			style: 'tableExample',
+			color: '#444',
+			table: {
+				widths: [20, 65, '*', '*', 65, 80],
+				headerRows: 1,
+				body: [
+					[{text: '', alignment: 'left', style: 'tableHeader'}, {text: 'Cust No:', alignment: 'left', style: 'tableHeader'}, {text: 'Name:', alignment: 'left', style: 'tableHeader'}, {text: 'Receipt No.', alignment: 'left', style: 'tableHeader'},{text: 'Method', alignment: 'right', style: 'tableHeader'},{text: 'Amount', alignment: 'right', style: 'tableHeader'}],
+				]
+			},
+			layout: 'noBorders'
+		},
+		{canvas: [{ type: 'line', x1: 0, y1: 5, x2: 595-2*40, y2: 5, lineWidth: 1 }]},
+		// ++++++++++++++++++++++++++++++++++
+		// BEGIN - DETAILS SHOULD BE DYNAMIC
+		// ++++++++++++++++++++++++++++++++++
+		{
+			style: 'tableExample',
+			color: '#444',
+			table: {
+				widths: [20, 65, '*', '*', 65, 80],
+				headerRows: 1,
+				body: [
+					[{text: '', alignment: 'left'}, {text: '00012345', alignment: 'left'}, {text: 'Customer Name #1', alignment: 'left'}, {text: 'SI-M-20171127073012', alignment: 'left'},{text: '257.4', alignment: 'right'},{text: '$441.42', alignment: 'right'}],
+				    [{text: '', alignment: 'left'}, {text: '00012345', alignment: 'left'}, {text: 'Customer Name #1', alignment: 'left'}, {text: 'SI-M-20171127073012', alignment: 'left'},{text: '257.4', alignment: 'right'},{text: '$441.42', alignment: 'right'}],
+				]
+			},
+			layout: 'noBorders'
+		},
+		// ++++++++++++++++++++++++++++++++++
+		// END - DETAILS SHOULD BE DYNAMIC
+		// ++++++++++++++++++++++++++++++++++
+        {canvas: [{ type: 'line', x1: 0, y1: 5, x2: 595-2*40, y2: 5, lineWidth: 1 }]},
+        {
+			style: 'tableExample',
+			color: '#444',
+			margin: [0, 5, 0, 0],
+			table: {
+				widths: [20, 65, '*', '*', 65, 80],
+				headerRows: 1,
+				body: [
+					['','','', {text: 'Total Receipts:', alignment: 'right', style: 'tableHeader'},'',{text: '$1,324.26', alignment: 'right', style: 'tableHeader'}],
+				]
+			},
+			layout: 'noBorders'
+		},
+        {text: '\n'},
+        
+      ],
+      styles: {
+        header: {
+          fontSize: 14,
+          bold: true,
+          alignment: 'center',
+          margin: [0, 10, 0, 10],
+          fontfamily: 'Wingdings'
+        },
+        subheader: {
+          fontSize: 14,
+          bold: true,
+          margin: [0, 15, 0, 0]
+        },
+		tableHeader: {
+			bold: true,
+			fontSize: 13,
+			color: 'black'
+		},
+        story: {
+          italic: true,
+          alignment: 'center',
+          width: '50%'
+        },
+        body: {
+          fontSize: 12
+        }
+      },
+      defaultStyle: {
+          fontSize: 11.5
+      }      
+}

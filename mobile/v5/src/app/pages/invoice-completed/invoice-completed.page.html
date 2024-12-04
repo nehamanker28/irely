@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row large>
+        <ion-col>
+          <ion-searchbar #txtSearch  [(ngModel)]="searchValue" large (ionChange)="getInvoiceList()" [debounce]="2000"></ion-searchbar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content padding scrollX="true">       
+  <!-- <ion-scroll scrollX="true" [ngStyle]="{'height':dynamicScrollHeight}"> -->
+    <ion-list [ngStyle]="{'width':dynamicScrollWidth}">
+      <ion-row>
+        <ion-col style="width: 900px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Invoice No</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 150px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Customer No</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 250px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Customer Name</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Location Name</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 300px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Invoice Date</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 70px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label style="text-align: left;"><b>Void</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Comments</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Void Comments</b></ion-label>
+          </ion-item>
+        </ion-col>          
+      </ion-row>
+
+      <ion-row *ngFor="let item of data">
+        <ion-col style="width: 900px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strInvoiceNo}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 150px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strCustomerNo}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 250px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strCustomerName}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strLocationName}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 300px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.dtmInvoiceDate}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 70px !important; padding: 5px 0px 5px 0px">
+          <ion-item style="width: 100% !important; align-items: center;">
+            <ion-toggle [(ngModel)]="item['ysnVoided']" checked="item['ysnVoided']" [disabled]="item['ysnVoided']" color="blue" (ionChange)="voidInvoice(item)"></ion-toggle>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strComments}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strVoidComments}}</ion-label>
+          </ion-item>
+        </ion-col>                    
+      </ion-row>
+    </ion-list>
+  <!-- </ion-scroll> -->
+</ion-content>

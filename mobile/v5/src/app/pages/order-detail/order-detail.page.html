@@ -1,0 +1,205 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+
+    </ion-buttons>
+    <ion-button slot="end" primary (click)="buildInvoice()" [disabled]="delivered == 'Delivered'" >
+      Create Invoice
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-list style="margin-bottom: 0px;">
+      <p *ngIf="detail['dblCreditLimit'] <= 0" style="position:absolute;margin-left: 70%;" class="blink_me">Cash on delivery (COD)</p>
+      <ion-list-header class="order-details-header">
+        <h1>AR</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Stop Number:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['intStopNumber']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Item Number:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['strItemNo']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Quantity:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['dblQuantity']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Price:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['dblPrice']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Contract Number:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['strContractNumber']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Available Quantity:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['dblAvailableQty'] | number}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+    <ion-list style="margin-bottom: 0px;">
+      <ion-list-header class="order-details-header">
+        <h1>Customer</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Number:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['strCustomerNumber']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Phone:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['strPhone1']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Name:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['strCustomerName']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Email:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['strEmail']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Notes:</p>
+            </ion-col>
+            <ion-col size="9" style="justify-content: left;">
+              <p><b>{{detail['strInternalNotes']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+    <ion-list style="margin-bottom: 0px;">
+      <ion-list-header class="order-details-header">
+        <h1>AR</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Credit Limit:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['dblCreditLimit']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="4" style="justify-content: left;">
+              <p>Last Payment Date:</p>
+            </ion-col>
+            <ion-col size="2" style="justify-content: left;">
+              <p><b>{{detail['dtmLastPaymentDate']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Current Balance:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['dblTotalDue']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="4" style="justify-content: left;">
+              <p>Last Payment Amount:</p>
+            </ion-col>
+            <ion-col size="2" style="justify-content: left;">
+              <p><b>{{detail['dblLastPayment']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>31 Days Amt:</p>
+            </ion-col>
+            <ion-col size="9" style="justify-content: left;">
+              <p><b>{{detail['dbl31DaysAmountDue']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-item>
+    </ion-list>
+    <ion-list style="margin-bottom: 0px;">
+      <ion-list-header class="order-details-header">
+        <h1>Site</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Number:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['intSiteNumber']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Address:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['strSiteAddress']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Description:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['strDescription']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p>City:</p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p><b>{{detail['strCity']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Instruction:</p>
+            </ion-col>
+            <ion-col size="9" style="justify-content: left;">
+              <p><b>{{detail['strInstruction']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

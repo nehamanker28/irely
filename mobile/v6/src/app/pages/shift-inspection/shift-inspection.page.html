@@ -1,0 +1,225 @@
+<ion-header>  
+
+  <ion-toolbar class="my-toolbar box-shadow" >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-grid no-padding>
+      <ion-row justify-content-start>
+        <ion-col size="8.5" style="margin-right: 5px; color: black">
+          <ion-item>
+            <b>Truck ID: &nbsp; {{data['strTruckNumber']}}</b>
+          </ion-item>
+        </ion-col>
+        <ion-col col-auto></ion-col>
+        <ion-col size="3" style="margin-right: 5px;">
+          <ion-button ion-button expand="block" size="large"primary (click)="save(data)" class="button-global">Save</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col>
+
+          <ion-list>
+            <ion-item style="background-color: transparent !important; border-top-color: transparent;" >
+              <ion-label>No Defects</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('all')" [(ngModel)]="data['ysnNoDefects']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Air Compressor and Lines</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnAirCompressorAndLines']" ></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Battery and Connections</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnBatteryAndConnections']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Body/Cab/Door</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnBodyCabDoors']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Brake Accessories</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnBrakeAccessories']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Brake</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnBrakes']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Cluth</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnCluth']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+                <ion-label>Coolant Leak</ion-label>
+                <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnCoolantLeak']"></ion-checkbox>
+              </ion-item>     
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Drive Line</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnDriveLine']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important; border-bottom-color: transparent;" >
+              <ion-label>Engine</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnEngine']"></ion-checkbox>
+            </ion-item>                                         
+          </ion-list>
+  
+        </ion-col>
+        <ion-col>
+
+          <ion-list>       
+            <ion-item style="background-color: transparent !important; border-top-color: transparent;" >
+              <ion-label>Exhaust</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnExhaust']"></ion-checkbox>
+            </ion-item>         
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Fire Extinguisher</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnFireExtinguisher']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Front Axle</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnFrontAxle']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Fuel Leak</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnFuelLeak']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Fuel Tanks</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnFuelTanks']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Gauges</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnGauges']"></ion-checkbox>
+            </ion-item>                                                   
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Heater/Defroster</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnHeaterDefroster']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Horn</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnHorn']"></ion-checkbox>
+            </ion-item>                 
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Lights/Reflectors</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnLightsReflectors']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important; border-bottom-color: transparent;" >
+              <ion-label>Mirrors</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnMirrors']"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+
+        </ion-col>
+        <ion-col>            
+
+          <ion-list>                                    
+            <ion-item style="background-color: transparent !important; border-top-color: transparent;" >
+              <ion-label>Mud Flaps</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnMudFlaps']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Oil Leak</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnOilLeak']"></ion-checkbox>
+            </ion-item> 
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Oil Pressure</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnOilPressure']"></ion-checkbox>
+            </ion-item>       
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Placards</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnPlacards']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Radiator</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnRadiator']"></ion-checkbox>
+            </ion-item>           
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Rear End/Axle Studs</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnRearEndAxleStuds']"></ion-checkbox>
+            </ion-item>     
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Safety Equipment</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnSafetyEquipment']"></ion-checkbox>
+            </ion-item>                 
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Springs</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnSprings']"></ion-checkbox>
+            </ion-item>     
+            <ion-item style="background-color: transparent !important" >
+              <ion-label>Steering</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnSteering']"></ion-checkbox>
+            </ion-item>
+            <ion-item style="background-color: transparent !important; border-bottom-color: transparent;" >
+              <ion-label>Tachograph</ion-label>
+              <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnTachograph']"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+
+        </ion-col>
+        <ion-col>
+
+            <ion-list>              
+              <ion-item style="background-color: transparent !important; border-top-color: transparent;" >
+                <ion-label>Tanks</ion-label>
+                <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnTanks']"></ion-checkbox>
+              </ion-item>
+              <ion-item style="background-color: transparent !important" >
+                <ion-label>Tires</ion-label>
+                <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnTires']"></ion-checkbox>
+              </ion-item>
+              <ion-item style="background-color: transparent !important" >
+                <ion-label>Transmission</ion-label>
+                <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnTransmission']"></ion-checkbox>
+              </ion-item>
+              <ion-item style="background-color: transparent !important" >
+                <ion-label>Unloading Hoses/Pumps</ion-label>
+                <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnUnloadingHosesPumps']"></ion-checkbox>
+              </ion-item>
+              <ion-item style="background-color: transparent !important" >
+                <ion-label>Wheels/Rims/Lugs</ion-label>
+                <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnWheelsRimsLugs']"></ion-checkbox>
+              </ion-item>
+              <ion-item style="background-color: transparent !important" >
+                <ion-label>Windows</ion-label>
+                <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnWindows']"></ion-checkbox>
+              </ion-item>
+              <ion-item style="background-color: transparent !important" >
+                <ion-label>Windshield Wipers</ion-label>
+                <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnWindshieldWipers']"></ion-checkbox>
+              </ion-item>
+              <ion-item style="background-color: transparent !important" >
+                <ion-label>Other</ion-label>
+                <ion-checkbox color="primary" (click)="uncheck('')" [(ngModel)]="data['ysnOthers']"></ion-checkbox>
+              </ion-item>                 
+              <ion-item style="background-color: transparent !important" >
+                <ion-label></ion-label>
+              </ion-item>       
+              <ion-item style="background-color: transparent !important; border-bottom-color: transparent;" >
+                <ion-label></ion-label>
+              </ion-item>       
+            </ion-list>
+  
+        </ion-col>
+      </ion-row>   
+      <ion-row>
+        <ion-col style="height: 0px;">
+          <ion-item>
+            <ion-label stacked>Comments: </ion-label>
+            <ion-input type="text" style="border-color: black; border-style: dashed;" [(ngModel)]="data['strComments']"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>   
+      <ion-row>
+        <br><br><br><br>
+      </ion-row>
+      <ion-row>
+        <br><br><br><br>
+      </ion-row>
+    </ion-grid>
+</ion-content>

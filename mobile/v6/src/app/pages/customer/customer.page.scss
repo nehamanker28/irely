@@ -1,0 +1,19 @@
+$categories: (
+    generated: var(--ion-color-primary),
+    customer: #6600cc,
+ //   food: #3bc7c4,
+ //   documentation: #b16be3,
+ //   navigation: #6600cc
+ );
+ 
+ @each $track, $value in map-remove($categories) {
+  ion-item-sliding[track='#{$track}'] ion-label {
+    border-left: 2px solid $value;
+    padding-left: 10px;
+  }
+}
+
+.customer {
+  border-left: 2px solid #6600cc;
+    padding-left: 10px;
+}

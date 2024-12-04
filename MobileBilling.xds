@@ -1,0 +1,51 @@
+{
+    "name": "MobileBilling",
+    "settings": {
+        "cmd": {
+            "cmdVersion": "6.6.0.13",
+            "license": "commercial",
+            "frameworkVersion": "6.5.3.57"
+        },
+        "urlPrefixTemplate": "http://localhost:{port}/{path}",
+        "urlPrefix": "http://localhost:12172/",
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "4.2.4",
+    "xdsBuild": 389,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext65",
+    "viewOrderMap": {
+        "view": [
+            "5c6cf430-d938-4f3d-8045-751a6bcc964f",
+            "fa25c120-d474-4987-85f8-a6b271a84de4",
+            "a1c8bc48-988e-423b-96c5-f31fbcf2645b",
+            "5c1c80f3-c491-4301-954b-ac90b95192cb"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "19f43b39-c1ed-49f0-a100-637b4356cc59",
+            "e92b156c-0a5e-42ba-b171-940b4a9ad36b"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

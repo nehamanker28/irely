@@ -1,0 +1,481 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Shift</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="data">
+  <ion-grid>
+
+    <ion-row>
+      <ion-col size="4">
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="receiveFullData(data)">Receive Full Data</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-col size="4">
+            <ion-item class="control-disabled">
+              <ion-label>Full Data Received: </ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item class="control-disabled">
+              <ion-label style="width: 50% !important">{{data['dtmReceivedFullData']}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row> 
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="startShift(data)" [disabled]="disableOnGoingShift">Start Shift</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-col size="4">
+            <ion-item class="control-disabled">
+              <ion-label>Driver Info: </ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col >
+            <ion-item class="control-disabled">
+              <ion-input type="text" [(ngModel)]="driver" readonly="true"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-item >
+              <ion-label>Truck: </ion-label>              
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item [ngClass]="true===disableOnGoingShift?'control-disabled':'control-enabled'">
+              <ion-select  [disabled]="disableOnGoingShift" clearInput interface="popover" [value]="data['intTruckId']" [(ngModel)]="data['intTruckId']"> 
+                <ion-select-option *ngFor="let item of truck; let i = index;" [value]="item.intTruckId">
+                  <span>{{item.strTruckNumber}}</span>
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-item class="control-disabled">
+              <ion-label>Shift #: </ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item [ngClass]="true===disableOnGoingShift?'control-disabled':'control-enabled'">
+             <!-- // <ion-select  [disabled]="shiftNumberStatus" clearInput interface="popover" [value]="data['intTruckId']" [(ngModel)]="data['intShiftCounter']">  -->
+              <ion-select [disabled]="disableOnGoingShift" clearInput interface="popover" [value]="data['intShiftCounter']" [(ngModel)]= "data['intShiftCounter']" >
+                <ion-select-option  *ngFor="let item of ShiftArray; let i = index;" [value]="item.intShiftCounter">
+                  <span>{{item.name}}</span>
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+          <!-- <ion-col >
+            <ion-item class="control-disabled">
+              <ion-input type="text" [(ngModel)]="data['intShiftCounter']" readonly="true"></ion-input>
+            </ion-item>
+          </ion-col>         -->
+        </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <ion-item class="control-disabled">
+            <ion-label>Shift Started: </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="control-disabled">
+            <ion-input type="text" value="{{startDate}}" readonly="true" [disabled]="startShiftStatus"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="4">
+          <ion-item>
+            <ion-label>Start Odometer: </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-input type="number" [(ngModel)]="data['dblOdometerStart']" class="editable-input" id='odometerStart' (ionFocus)="clearInputValue($event)" [disabled]="disableOnGoingShift" (keyup.enter)="hideKeyboard()"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>      
+      <ion-row>
+        <ion-col size="4">
+          <ion-item class="control-disabled">
+            <ion-label>Start Totalizer: </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="control-disabled">
+            <ion-input type="number" [(ngModel)]="data['dblTotalizer1Start']" readonly="true"></ion-input>
+          </ion-item>
+        </ion-col>        
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <ion-item class="control-disabled">
+            <ion-label>Number of Orders: </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="control-disabled">
+            <ion-label>{{data['strTotalOrderReceived']}}</ion-label>
+          </ion-item>
+        </ion-col>        
+      </ion-row>
+      </ion-col>
+    </ion-row>
+  
+    <br>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="openInspection(data)" [disabled]="disableInspectionSheet">Inspection Sheet</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-col>
+            <ion-item class="control-disabled" >
+              <ion-label (click)="openPDF('truckInspection')" style="color: blue;">{{strTruckInspectionPDF}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>        
+      </ion-col>
+    </ion-row>    
+    <br>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="openHosepipingChek(data)" [disabled]="disableHosePiping">Hose/Piping Sheet</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-col>
+            <ion-item class="control-disabled" >
+              <ion-label (click)="openPDF('hosePipingCheck')" style="color: blue;">{{strHosePipingCheckPDF}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>        
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="openLoadInventory(data)" [disabled]="disableLoadInventory">Load Inventory</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-row *ngFor="let item of dataLoadInventory; let i=index">
+          <ion-col *ngIf="item.intItemId > 0">
+            <ion-item class="control-disabled" >
+              <ion-label>{{item.strItemNo}} {{item.strDescription}}: {{item.dblQuantity}} {{item.strUnitMeasure}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>        
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="reviewShift()" [disabled]="disableReviewShift">Review Shift</ion-button>                
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-col>
+            <ion-item class="control-disabled" >
+              <ion-label (click)="openPDF('reviewShift')" style="color: blue;">{{strReviewShiftPDF}}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>        
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col size="4">
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="endShift()" [disabled]="disableEndShift">End Shift</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-row>
+          <ion-col size="4">
+            <ion-item class="control-disabled">
+              <ion-label>Shift Ended: </ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item class="control-disabled">
+              <ion-input type="text" value="{{endDate}}" readonly="true" [disabled]="disableEndShift"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="4">
+            <ion-item>
+              <ion-label>End Odometer: </ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-input type="number" [(ngModel)]="data['dblOdometerEnd']" class="editable-input" id='dblOdometerEnd' (ionFocus)="clearInputValue($event)" [disabled]="disableEndShift" (keyup.enter)="hideKeyboard()"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>   
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-content>
+  <ion-grid fixed="true">
+    <ion-row>
+      <ion-col size-xl="2" size-lg="2" size-md="6" size-sm="6" size-xs="12">
+        <ion-item class="control-disabled">
+          <ion-label stacked >Shift #: </ion-label>
+          <ion-input type="text" [(ngModel)]="data['intShiftCounter']" readonly="true"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size-xl="4" size-lg="4" size-md="6" size-sm="6" size-xs="12">
+        <ion-item >
+          <ion-label stacked >Truck: </ion-label>
+          <ion-select [ngClass]="true===truckNumberStatus?'control-disabled':'control-enabled'" [disabled]="truckNumberStatus" clearInput interface="popover" [value]="data['intTruckId']" [(ngModel)]="data['intTruckId']"> 
+            <ion-select-option *ngFor="let item of truck; let i = index;" [value]="item.intTruckId">
+              <span>{{item.strTruckNumber}}</span>
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="2" size-lg="2" size-lg="2" size-md="4" size-xs="4">
+        <ion-item class="control-disabled">
+          <ion-label>Driver Info: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="4" size-lg="4" size-lg="4" size-md="8" size-xs="8">
+        <ion-item class="control-disabled">
+          <ion-input type="text" [(ngModel)]="driver" readonly="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-xl="2" size-lg="2" size-lg="2" size-md="4" size-xs="4">
+        <ion-item class="control-disabled">
+          <ion-label>Started: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="4" size-lg="4" size-lg="4" size-md="8" size-xs="8">
+        <ion-item class="control-disabled">
+          <ion-input type="text" value="{{startDate}}" readonly="true" [disabled]="startShiftStatus"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="2" size-lg="2" size-lg="2" size-md="4" size-xs="4">
+        <ion-item class="control-disabled">
+          <ion-label>Ended: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="4" size-lg="4" size-lg="4" size-md="8" size-xs="8">
+        <ion-item class="control-disabled">
+          <ion-input type="text" value="{{endDate}}" readonly="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-lg="2" size-lg="2" size-lg="2" size-md="4" size-xs="4">
+        <ion-item>
+          <ion-label>Odometer: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="4" size-lg="4" size-lg="4" size-md="8" size-xs="8">
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="data['dblOdometerStart']" class="editable-input" id='odometerStart' (ionFocus)="clearInputValue($event)" [disabled]="startShiftStatus" (keyup.enter)="hideKeyboard()"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="2" size-lg="2" size-lg="2" size-md="4" size-xs="4">
+        <ion-item>
+          <ion-label>Odometer: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="4" size-lg="4" size-lg="4" size-md="8" size-xs="8">
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="data['dblOdometerEnd']" class="editable-input" id='odometerEnd' (ionFocus)="clearInputValue($event)" (keyup.enter)="hideKeyboard()"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-lg="2" size-lg="2" size-lg="2" size-md="4" size-xs="4">
+        <ion-item class="control-disabled">
+          <ion-label>Totalizer 1: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="4" size-lg="4" size-lg="4" size-md="8" size-xs="8">
+        <ion-item class="control-disabled">
+          <ion-input type="number" [(ngModel)]="data['dblTotalizer1Start']" readonly="true"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="2" size-lg="2" size-lg="2" size-md="4" size-xs="4">
+        <ion-item class="control-disabled">
+          <ion-label>Totalizer 1: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size-lg="4" size-lg="4" size-lg="4" size-md="8" size-xs="8">
+        <ion-item class="control-disabled">
+          <ion-input type="number" [(ngModel)]="data['dblTotalizer1End']" readonly="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2">
+        <ion-item class="control-disabled">
+          <ion-label>Totalizer 2: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class="control-disabled">
+          <ion-input type="number" [(ngModel)]="data['dblTotalizer2Start']" readonly="true"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2">
+        <ion-item class="control-disabled">
+          <ion-label>Totalizer 2: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item class="control-disabled">
+          <ion-input type="number" [(ngModel)]="data['dblTotalizer2End']" readonly="true"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>                
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="startShift(data)" [disabled]="isShiftReady">Start Shift</ion-button>                
+      </ion-col>
+      <ion-col>                
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="endShift(data)" [disabled]="endShiftStatus">End Shift</ion-button>                
+      </ion-col>              
+      <ion-col>                
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="reviewShift()" [disabled]="endShiftStatus">Review Shift</ion-button>                
+      </ion-col>              
+      <ion-col>
+        <ion-button no-padding ion-button expand="block" size="large" color="primary" (click)="buildSendData()" [disabled]="endShiftStatus">Send Shift Data</ion-button>                
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col size="3.3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">Last Received Orders:</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">{{data.dtmReceivedOrders}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button no-padding ion-button expand="block" size="medium" color="primary" (click)="receiveOrder(data)">Receive Orders</ion-button>
+      </ion-col>
+      <ion-col size="2.7">
+        <ion-item class="control-disabled">
+          <ion-label>{{data.strTotalOrderReceived}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3.3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">Last Received Full Data: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">{{data.dtmReceivedFullData}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button no-padding ion-button expand="block" size="medium" color="primary" (click)="receiveFullData(data)">Receive Full Data</ion-button>
+      </ion-col>             
+      <ion-col size="2.7">
+        
+      </ion-col> 
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3.3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">Last Load Inventory: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">{{data.dtmLoadInventory}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button no-padding ion-button expand="block" size="medium" color="primary" (click)="openLoadInventory(data)">Load Inventory</ion-button>                
+      </ion-col>
+      <ion-col size="2.7">                
+      </ion-col> 
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3.3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">Last Truck Inspection: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">{{data.dtmTruckInspection}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button no-padding ion-button expand="block" size="medium" color="primary" (click)="openInspection(data)">Inspection Sheet</ion-button>
+      </ion-col>
+      <ion-col size="2.7">                
+      </ion-col> 
+    </ion-row>
+    <ion-row>
+      <ion-col size="3.3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">Last Hose/Piping Check: </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-item class="control-disabled">
+          <ion-label style="width: 50% !important">{{data.dtmHosePipingCheck}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button no-padding ion-button expand="block" size="medium" color="primary" (click)="openHosepipingChek(data)">Hose/Piping Sheet</ion-button>
+      </ion-col>
+      <ion-col size="2.7">
+        
+      </ion-col> 
+    </ion-row>
+  </ion-grid>        
+</ion-content> -->

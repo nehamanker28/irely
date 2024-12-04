@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Configuration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-list>
+    <ion-list-header style="font-weight: bolder;">
+      Defaults
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="person" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">New Customer No</ion-label>
+      <ion-label style="text-align-last: end; font-weight: bolder;">{{data.strDefaultCustomerNo}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="pin" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">New Site No</ion-label>  
+      <ion-label style="text-align-last: end; font-weight: bolder;">{{data.strDefaultSiteNo}}</ion-label>
+    </ion-item>
+  </ion-list> -->
+  <ion-list>
+    <ion-list-header style="font-weight: bolder;">
+      Settings
+    </ion-list-header>
+    <ion-item routerLink="/configuration-settings">
+      <ion-icon name="build-outline" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Device Setup</ion-label>
+      <ion-button ion-button size="large"style="width: 300px !important"item-end>Open</ion-button>
+    </ion-item>
+  </ion-list> 
+  <ion-list>
+    <ion-list-header style="font-weight: bolder;">
+      Data Tables
+    </ion-list-header>
+    <ion-item routerLink="/configuration-table-update" >
+      <ion-icon name="cloud-download-outline" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Update Tables</ion-label>
+      <ion-button ion-button size="large"style="width: 300px !important" item-end>Open</ion-button>
+    </ion-item>
+    <ion-item routerLink="/configuration-table-view">
+      <ion-icon name="grid-outline" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">View Tables</ion-label>
+      <ion-button ion-button size="large"style="width: 300px !important" item-end>Open</ion-button>
+    </ion-item>    
+    <!-- <ion-item>
+      <ion-icon name="refresh" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Update Table Schema</ion-label>
+      <ion-button ion-button size="large"style="width: 300px !important" (click)="updateSchema()" item-end>Update</ion-button>
+    </ion-item> -->
+    <ion-item>
+      <ion-icon name="layers" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Refresh Database</ion-label>
+      <ion-button ion-button size="large"style="width: 300px !important" (click)="refreshTable()" item-end>Refresh</ion-button>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-icon name="cloud-download" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Export Data from i21</ion-label>
+      <ion-button ion-button size="large"style="width: 300px !important" (click)="generateExport()" item-end>Download Data</ion-button>
+    </ion-item> -->
+  </ion-list> 
+  <ion-list>
+    <ion-list-header style="font-weight: bolder;">
+      LCR Connection
+    </ion-list-header>
+    <ion-item routerLink="/configuration-meter-device">
+      <ion-icon name="speedometer-outline" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Meter Devices</ion-label>
+      <ion-button ion-button size="large"style="width: 300px !important"item-end>Connect</ion-button>
+    </ion-item>
+  </ion-list> 
+</ion-content>

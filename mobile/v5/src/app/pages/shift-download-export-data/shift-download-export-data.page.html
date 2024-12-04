@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar box-shadow" >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-grid no-padding>
+      <ion-row>        
+        <ion-col></ion-col>
+        <ion-col size="2" end>
+          <ion-button end ion-button expand="block" primary size="large"(click)="done()" class="button-global">Done</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollX="true">       
+  <br>
+  <ion-list>
+    <ion-grid padding>
+      <ion-row justify-content-start>
+        <ion-col size="4">
+          <ion-item>
+            <b>File Name</b>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <b>Date Created</b>
+          </ion-item>
+        </ion-col>        
+      </ion-row>
+      <ion-row *ngFor="let item of data; let i=index">
+        <ion-col size="4">
+          <ion-item>
+            <ion-checkbox style="margin: 0px !important;" color="primary" [(ngModel)]="item['ysnSelected']" (click)="selectItem(item)"></ion-checkbox>
+            <ion-label style="padding-left: 5px;">{{item.strFileName}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label>{{item.dtmCreatedDate |  date:'MM/dd/yyyy hh:mm:ss'}}</ion-label>
+          </ion-item>
+        </ion-col>        
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row large>
+        <ion-col size="10" style="padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>File Name</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <ion-list >
+    <ion-row *ngFor="let item of data" >
+      <ion-col size="10" style="padding: 5px 0px 5px 0px" (click)='openPDF(item)'>
+        <ion-item>
+          <ion-label>{{item.filename}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="2" >
+        <ion-item>
+          <ion-button ion-button expand="block" outline item-end icon-left style="padding: 5px 0px 5px 0px" (click)="deleteReport(item)" *ngIf="item.visible === 'true'">
+            <ion-icon name="ios-close"></ion-icon>
+            Delete
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-list> -->
+
+  <ion-list *ngFor="let item of pdflist; index as i">
+      <ion-list-header lines="inset" *ngIf="i == 0 || (i > 0 && pdflist[i-1].intShiftId != item.intShiftId)" color="primary">
+        <ion-label>
+          <h2>{{item.dtShiftDate | date:'fullDate'}} (Shift No. {{item.intShiftId}})</h2>
+        </ion-label>
+      </ion-list-header>
+      <ion-item (click)='openPDF2(item.strFileName)'>
+        <ion-label>
+          <p>{{item.strFileName}}</p>
+        </ion-label>
+      </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,245 @@
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.MobileBilling.Model.dll.config
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.MobileBilling.Model.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.MobileBilling.Model.pdb
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.Integration.WebApi.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\AutoMapper.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\DelegateDecompiler.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\DelegateDecompiler.EntityFramework.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EPPlus.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\FluentValidation.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Core.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.EntityModel.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Linq.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Validation.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.Common.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\itextsharp.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\itextsharp.xmlworker.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\MailBee.NET.45.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Mono.Reflection.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Newtonsoft.Json.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\RestSharp.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Net.Http.Formatting.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.WebHost.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Twilio.Api.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.Integration.WebApi.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\AutoMapper.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EPPlus.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\FluentValidation.pdb
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\FluentValidation.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Core.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.EntityModel.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Linq.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Validation.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\itextsharp.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\MailBee.NET.45.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Newtonsoft.Json.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\RestSharp.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Net.Http.Formatting.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.WebHost.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Twilio.Api.pdb
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Twilio.Api.xml
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\cs\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\da\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\de\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\es\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\fa\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\fi\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\fr\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\it\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\ko\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\mk\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\nl\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\pl\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\pt\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\ru\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\sv\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\tr\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\zh-CN\FluentValidation.resources.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.dll
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.pdb
+C:\i21\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.csprojResolveAssemblyReference.cache
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.MobileBilling.Model.dll.config
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.MobileBilling.Model.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.MobileBilling.Model.pdb
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.Integration.WebApi.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\AutoMapper.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\DelegateDecompiler.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\DelegateDecompiler.EntityFramework.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EPPlus.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\FluentValidation.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Gibraltar.Agent.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Core.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.EntityModel.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Linq.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Validation.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.Common.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\itextsharp.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\itextsharp.xmlworker.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\MailBee.NET.45.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Mono.Reflection.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Newtonsoft.Json.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Owin.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\RestSharp.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Net.Http.Formatting.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.WebHost.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Twilio.Api.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.Integration.WebApi.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\AutoMapper.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EPPlus.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\FluentValidation.pdb
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\FluentValidation.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Gibraltar.Agent.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Core.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.EntityModel.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Linq.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Validation.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\itextsharp.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\MailBee.NET.45.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Newtonsoft.Json.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\RestSharp.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Net.Http.Formatting.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.WebHost.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Twilio.Api.pdb
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Twilio.Api.xml
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\cs\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\da\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\de\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\es\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\fa\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\fi\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\fr\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\it\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\ko\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\mk\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\nl\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\pl\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\pt\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\ru\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\sv\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\tr\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\zh-CN\FluentValidation.resources.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.csproj.CoreCompileInputs.cache
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.csproj.CopyComplete
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.dll
+C:\+ Git\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.pdb
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.MobileBilling.Model.dll.config
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.MobileBilling.Model.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.MobileBilling.Model.pdb
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.Integration.WebApi.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\AutoMapper.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\DelegateDecompiler.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\DelegateDecompiler.EntityFramework.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EPPlus.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\FluentValidation.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Gibraltar.Agent.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Core.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.EntityModel.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Linq.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Validation.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Ionic.Zip.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\iRely.Common.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\itextsharp.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\itextsharp.xmlworker.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\MailBee.NET.45.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Mono.Reflection.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Newtonsoft.Json.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Owin.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\RestSharp.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Net.Http.Formatting.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.WebHost.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Twilio.Api.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Autofac.Integration.WebApi.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\AutoMapper.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\EPPlus.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\FluentValidation.pdb
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\FluentValidation.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Gibraltar.Agent.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Core.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.EntityModel.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Linq.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\IdeaBlade.Validation.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\itextsharp.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\MailBee.NET.45.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Newtonsoft.Json.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\RestSharp.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Net.Http.Formatting.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\System.Web.Http.WebHost.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Twilio.Api.pdb
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\Twilio.Api.xml
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\cs\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\da\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\de\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\es\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\fa\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\fi\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\fr\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\it\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\ko\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\mk\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\nl\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\pl\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\pt\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\ru\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\sv\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\tr\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\bin\Debug\zh-CN\FluentValidation.resources.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.csprojAssemblyReference.cache
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.csproj.CoreCompileInputs.cache
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.csproj.CopyComplete
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.dll
+C:\+Git\i21_mobilebilling\server\iRely.MobileBilling.Model\obj\Debug\iRely.MobileBilling.Model.pdb

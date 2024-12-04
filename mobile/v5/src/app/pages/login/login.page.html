@@ -1,0 +1,56 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+
+<ion-content class="outer-content" fullscreen="true">
+  <div class="login-container">
+    <div padding class="image-div">
+      <img src="assets/irely/irely_new.png"/>      
+    </div>
+
+    <form (ngSubmit)="doSignIn(loginForm.value, loginForm.valid)" [formGroup]="loginForm">
+      <ion-list>     
+        <ion-item>
+          <ion-label color="primary" floating>Username</ion-label>
+          <ion-input color="primary" tappable autocapitalize='off' formControlName="username" clearInput>
+          </ion-input>
+        </ion-item>
+        <ion-item *ngIf="!loginForm.controls.username.valid && submitAttempt" no-lines>
+          <p class="validationmessage"><ion-text color="primary">This field is required.</ion-text></p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" floating>Password</ion-label>
+          <ion-input color="primary" tappable type="password" formControlName="password" clearInput>
+          </ion-input>
+        </ion-item>
+        <ion-item *ngIf="!loginForm.controls.password.valid && submitAttempt" no-lines>
+          <p class="validationmessage"><ion-text color="primary">This field is required.</ion-text></p>
+        </ion-item>
+
+      </ion-list>  
+
+      <div class="submit-box">
+        <ion-button ion-button expand="block" type="submit" color="primary">Sign In</ion-button>        
+        <ion-button ion-button type="button" expand="block" icon-left color="primary" fill="outline" (click)="showConnection()" margin-top>
+          <ion-icon name="create-outline"></ion-icon> Server Configuration
+        </ion-button>
+      </div>
+
+      <!-- <div class="forgot-login-button">
+        <ion-button ion-button class="clear-button" center color="primary" (click)="showForgotPassword()" type="button" clear>
+          Forgot username / password?
+        </ion-button>
+      </div> -->
+
+      <div>
+        <label style="color: #919191; font-size: x-small;">Version : {{version}}</label>
+      </div>
+
+    </form>
+  
+  </div>
+</ion-content>

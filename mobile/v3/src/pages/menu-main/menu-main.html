@@ -1,0 +1,40 @@
+<ion-menu [content]="content">
+  <ion-content> 
+    <ion-list>
+      <button ion-item class="menu-label" (click)="openPage('SingleDashboardPage')" id="btnSingleDashboardPage">
+        <ion-icon name="home" class="ion-icon-menu"></ion-icon>
+        <div item-end>Home</div>
+      </button>
+      <button ion-item class="menu-label" (click)="openPage('ShiftMainPage')" id="btnShiftMainPage">
+        <ion-icon name="stopwatch" class="ion-icon-menu"></ion-icon>
+        <div item-end>Shift</div>
+      </button>
+      <button ion-item class="menu-label" (click)="openPage('OrderMainPage')" id="btnOrderMainPage">
+        <ion-icon name="cart" class="ion-icon-menu"></ion-icon>
+        <div item-end>Orders</div>
+      </button>
+      <button ion-item class="menu-label" (click)="openPage('CustomerMainPage')" id="btnCustomerMainPage">
+        <ion-icon name="person" class="ion-icon-menu"></ion-icon>
+        <div item-end>Customers</div>
+      </button>
+      <button ion-item class="menu-label" (click)="openPage('ViewInvoicePage')" id="btnViewInvoicePage">
+        <ion-icon name="paper" class="ion-icon-menu"></ion-icon>
+        <div item-end>Invoices</div>
+      </button>
+      <button ion-item class="menu-label" (click)="openPage('ViewPaymentPage')" id="btnViewPaymentPage">
+        <ion-icon name="cash" class="ion-icon-menu"></ion-icon>
+        <div item-end>Payments</div>
+      </button>
+      <button ion-item class="menu-label" (click)="openPage('ViewPdfPage')" id="btnViewPdfPage">
+        <ion-icon name="document" class="ion-icon-menu"></ion-icon>
+        <div item-end>View PDF</div>
+      </button>
+      <button ion-item class="menu-label" (click)="openPage('ConfigurationMainPage')" id="btnConfigurationMainPage">
+        <ion-icon name="build" class="ion-icon-menu"></ion-icon>
+        <div item-end>Configuration</div>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

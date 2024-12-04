@@ -1,0 +1,83 @@
+<!-- <ion-header>  
+  <ion-toolbar class="my-toolbar box-shadow" >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-grid no-padding>
+      <ion-row class="ion-align-self-end">
+        <ion-col></ion-col>
+        <ion-col size="3" style="margin-right: 5px; color: black">
+          <ion-button ion-button expand="block" size="large" primary (click)="searchCustomer()" class="button-global">Search Customer</ion-button>
+        </ion-col>
+        <ion-col size="3" style="margin-right: 5px;">
+          <ion-button ion-button expand="block" size="large" primary (click)="voidPayment()" class="button-global" [disabled]="!data['ysnCompleted']">Void</ion-button>
+        </ion-col>
+        <ion-col size="3" end>
+          <ion-button ion-button expand="block" size="large" primary (click)="completePayment()" class="button-global">Complete</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px; margin-top: 10px">
+          <ion-label>Payment Number:</ion-label>
+          <ion-input [(ngModel)]="data['strPaymentNo']" type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px; margin-top: 10px">
+          <ion-label>Entity Number:</ion-label>
+          <ion-input [(ngModel)]="data['strCustomerNo']" readonly="true"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Customer Name:</ion-label>
+          <ion-input [(ngModel)]="data['strCustomerName']" readonly="true"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Location Name:</ion-label>
+          <ion-select clearInput interface="popover" [(ngModel)]="data['intLocation']"> 
+              <ion-select-option *ngFor="let item of location; let i = index;" [value]="item.intCompanyLocationId">
+                <span>{{item.strLocationName}}</span>
+              </ion-select-option>
+            </ion-select>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Amount:</ion-label>
+          <ion-input type="number" [(ngModel)]="data['dblPayment']"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Method:</ion-label>
+          <ion-select #method clearInput interface="popover" (ionChange)="methodChange(method.value, currentCustomer)">
+            <ion-select-option selected="true">Check</ion-select-option>
+            <ion-select-option>Cash</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Check Number:</ion-label>
+          <ion-input *ngIf="_isCheck" type="number" [(ngModel)]="data['strCheckNumber']"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Comment:</ion-label>
+          <ion-textarea rows="4" [(ngModel)]="data['strComments']"></ion-textarea>
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content> -->

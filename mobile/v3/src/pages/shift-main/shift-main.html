@@ -1,0 +1,213 @@
+<!-- <ion-header >
+  <ion-navbar>
+    <img src="assets/irely/irely-w3.png" class="button button-icon button-clear" style="height: 55px; padding-left: 20px" menuToggle>
+    <ion-title>
+      Shift
+    </ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-content>
+          <ion-grid>
+            <ion-row>
+              <ion-col col-2>
+                <ion-item class="control-disabled">
+                  <ion-label stacked style="width: 300px !important">Shift Number</ion-label>
+                  <ion-input type="text" [(ngModel)]="data['intShiftCounter']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col col-4>
+                <ion-item class="control-disabled">
+                  <ion-label stacked>Driver</ion-label>
+                  <ion-input type="text" [(ngModel)]="driver" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col col-2>
+                <ion-item [ngClass]="true===truckNumberStatus?'control-disabled':'control-enabled'">
+                  <ion-label stacked style="width: 300px !important">Truck</ion-label>
+                  <ion-input type="text" [(ngModel)]="data['strTruckNumber']" class="editable-input" [readonly]="truckNumberStatus"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item [ngClass]="true===LocationStatus?'control-disabled':'control-enabled'">
+                  <ion-label stacked style="opacity: 1.0 !important">Location</ion-label>
+                  <ion-select [disabled]="LocationStatus" clearInput interface="popover" [(ngModel)]="data['intLocation']" style="opacity: 1.0 !important"> 
+                    <ion-option *ngFor="let item of location; let i = index;" [selected]="item.intCompanyLocationId == data['intLocation'] ? true : false" [value]="item.intCompanyLocationId">
+                      <span>{{item.strLocationName}}</span>
+                    </ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item class="control-disabled">
+                  <ion-label>Started</ion-label>
+                  <ion-input type="text" value="{{startDate}}" readonly="true"></ion-input>
+                </ion-item>
+                </ion-col>
+                <ion-col>
+                <ion-item class="control-disabled">
+                  <ion-label>Ended</ion-label>
+                  <ion-input type="text" value="{{endDate}}" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label>Odometer</ion-label>
+                  <ion-input type="number" [(ngModel)]="data['dblOdometerStart']" class="editable-input" id='odometerStart' (ionFocus)="clearInputValue($event)" [disabled]="startShiftStatus" (keyup.enter)="hideKeyboard()"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label>Odometer</ion-label>
+                  <ion-input type="number" [(ngModel)]="data['dblOdometerEnd']" class="editable-input" id='odometerEnd' (ionFocus)="clearInputValue($event)" (keyup.enter)="hideKeyboard()"></ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item class="control-disabled">
+                  <ion-label>Totalizer 1</ion-label>
+                  <ion-input type="number" [(ngModel)]="data['dblTotalizer1Start']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+                <ion-col>
+                  <ion-item class="control-disabled">
+                    <ion-label>Totalizer 1</ion-label>
+                    <ion-input type="number" [(ngModel)]="data['dblTotalizer1End']" readonly="true"></ion-input>
+                  </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item class="control-disabled">
+                  <ion-label>Totalizer 2</ion-label>
+                  <ion-input type="number" [(ngModel)]="data['dblTotalizer2Start']" readonly="true"></ion-input>
+                </ion-item>
+              </ion-col>
+                <ion-col>
+                  <ion-item class="control-disabled">
+                    <ion-label>Totalizer 2</ion-label>
+                    <ion-input type="number" [(ngModel)]="data['dblTotalizer2End']" readonly="true"></ion-input>
+                  </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>                
+                <button no-padding ion-button block large color="blue" (click)="startShift(data)" [disabled]="startShiftStatus">Start Shift</button>                
+              </ion-col>
+              <ion-col>                
+                <button no-padding ion-button block large color="blue" (click)="endShift(data)" [disabled]="endShiftStatus">End Shift</button>                
+              </ion-col>              
+              <ion-col>                
+                <button no-padding ion-button block large color="blue" (click)="reviewShift()" [disabled]="endShiftStatus">Review Shift</button>                
+              </ion-col>              
+              <ion-col>
+                <button no-padding ion-button block large color="blue" (click)="buildSendData()" [disabled]="endShiftStatus">Send Shift Data</button>                
+              </ion-col>
+            </ion-row>
+            <ion-row no-padding>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">Last Received Orders:</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">{{data.dtmReceivedOrders}}</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <button no-padding ion-button block medium color="blue" (click)="receiveOrder(data)">Receive Orders</button>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label>{{data.strTotalOrderReceived}}</ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">Last Received Full Data: </ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">{{data.dtmReceivedFullData}}</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <button no-padding ion-button block medium color="blue" (click)="receiveFullData(data)">Receive Full Data</button>
+              </ion-col>             
+              <ion-col col-3>
+                
+              </ion-col> 
+            </ion-row>
+
+            <ion-row>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">Last Load Inventory: </ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">{{data.dtmLoadInventory}}</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <button no-padding ion-button block medium color="blue" (click)="openLoadInventory(data)">Load Inventory</button>                
+              </ion-col>
+              <ion-col col-3>                
+              </ion-col> 
+            </ion-row>
+
+            <ion-row>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">Last Truck Inspection: </ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">{{data.dtmTruckInspection}}</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <button no-padding ion-button block medium color="blue" (click)="openInspection(data)">Inspection Sheet</button>
+              </ion-col>
+              <ion-col col-3>                
+              </ion-col> 
+            </ion-row>
+            <ion-row>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">Last Hose/Piping Check: </ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <ion-item class="control-disabled">
+                  <ion-label style="width: 50% !important">{{data.dtmHosePipingCheck}}</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col col-3>
+                <button no-padding ion-button block medium color="blue" (click)="openHosepipingChek(data)">Hose/Piping Sheet</button>
+              </ion-col>
+              <ion-col col-3>
+                
+              </ion-col> 
+            </ion-row>
+          </ion-grid>
+        </ion-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,9 @@
+{
+    "Security.framework": 1,
+    "SystemConfiguration.framework": 2,
+    "CoreBluetooth.framework": 1,
+    "CoreLocation.framework": 2,
+    "WebKit.framework": 1,
+    "CoreTelephony.framework": 1,
+    "libz.dylib": 1
+}

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbols LinesOfCode="167" PostSharpLinesOfCode="0" EnhancedTypesCount="12" SchemaVersion="1" PostSharpVersion="5.0.41.0" xmlns="http://schemas.postsharp.org/2.0/symbols">
+  <Evolution Source="#1=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceTaxCodeBl::GetDetails(iRely.Common.GetParameter)" Target="#2=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceTaxCodeBl+&lt;GetDetails&gt;d__1::MoveNext()" />
+  <Evolution Source="#3=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceTaxCodeBl::AddRecord(System.Collections.Generic.IEnumerable{[iRely.MobileBilling.Model]iRely.MobileBilling.Model.tblMBILInvoiceTaxCode}, System.Boolean)" Target="#4=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceTaxCodeBl+&lt;AddRecord&gt;d__2::MoveNext()" />
+  <Evolution Source="#5=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceItemBl::GetDetails(iRely.Common.GetParameter)" Target="#6=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceItemBl+&lt;GetDetails&gt;d__1::MoveNext()" />
+  <Evolution Source="#7=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceItemBl::AddRecord(System.Collections.Generic.IEnumerable{[iRely.MobileBilling.Model]iRely.MobileBilling.Model.tblMBILInvoiceItem}, System.Boolean)" Target="#8=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceItemBl+&lt;AddRecord&gt;d__2::MoveNext()" />
+  <Evolution Source="#9=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl::GetAsync(iRely.Common.GetParameter)" Target="#10=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl+&lt;GetAsync&gt;d__1::MoveNext()" />
+  <Evolution Source="#11=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl::Search(iRely.Common.GetParameter)" Target="#12=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl+&lt;Search&gt;d__2::MoveNext()" />
+  <Evolution Source="#13=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl::SearchItems(iRely.Common.GetParameter)" Target="#14=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl+&lt;SearchItems&gt;d__3::MoveNext()" />
+  <Evolution Source="#15=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl::GetDetails(iRely.Common.GetParameter)" Target="#16=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl+&lt;GetDetails&gt;d__4::MoveNext()" />
+  <Evolution Source="#17=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl::VoidInvoice(System.Int32)" Target="#18=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl+&lt;VoidInvoice&gt;d__5::MoveNext()" />
+  <Evolution Source="#19=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl::SyncMobileInvoices(System.Collections.Generic.IEnumerable{[iRely.MobileBilling.Model]iRely.MobileBilling.Model.vyuMBILInvoice})" Target="#20=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl+&lt;SyncMobileInvoices&gt;d__6::MoveNext()" />
+  <Evolution Source="#21=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl::PostInvoice(System.String, System.Boolean, System.Boolean, System.Int32)" Target="#22=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.InvoiceBl+&lt;PostInvoice&gt;d__7::MoveNext()" />
+  <Evolution Source="#23=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.CompanyPreferenceBl::GetAsync(iRely.Common.GetParameter)" Target="#24=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.CompanyPreferenceBl+&lt;GetAsync&gt;d__1::MoveNext()" />
+  <Evolution Source="#25=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl::StartShift(iRely.MobileBilling.Model.vyuMBILShift)" Target="#26=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl+&lt;StartShift&gt;d__1::MoveNext()" />
+  <Evolution Source="#27=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl::Search(iRely.Common.GetParameter)" Target="#28=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl+&lt;Search&gt;d__2::MoveNext()" />
+  <Evolution Source="#29=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl::GetAsync(iRely.Common.GetParameter)" Target="#30=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl+&lt;GetAsync&gt;d__3::MoveNext()" />
+  <Evolution Source="#31=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl::AddRecord(System.Collections.Generic.IEnumerable{[iRely.MobileBilling.Model]iRely.MobileBilling.Model.tblMBILShift}, System.Boolean)" Target="#32=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl+&lt;AddRecord&gt;d__4::MoveNext()" />
+  <Evolution Source="#33=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl::GetInvoices(iRely.Common.GetParameter)" Target="#34=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl+&lt;GetInvoices&gt;d__5::MoveNext()" />
+  <Evolution Source="#35=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl::GetPayments(iRely.Common.GetParameter)" Target="#36=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl+&lt;GetPayments&gt;d__6::MoveNext()" />
+  <Evolution Source="#37=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl::SyncMobileShift(iRely.MobileBilling.Model.vyuMBILShift)" Target="#38=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl+&lt;SyncMobileShift&gt;d__7::MoveNext()" />
+  <Evolution Source="#39=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl::SyncEntireShift(iRely.MobileBilling.Model.vyuMBILShift)" Target="#40=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ShiftBl+&lt;SyncEntireShift&gt;d__8::MoveNext()" />
+  <Evolution Source="#41=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl::GetAsync(iRely.Common.GetParameter)" Target="#42=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl+&lt;GetAsync&gt;d__1::MoveNext()" />
+  <Evolution Source="#43=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl::Search(iRely.Common.GetParameter)" Target="#44=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl+&lt;Search&gt;d__2::MoveNext()" />
+  <Evolution Source="#45=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl::VoidPayment(System.String)" Target="#46=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl+&lt;VoidPayment&gt;d__3::MoveNext()" />
+  <Evolution Source="#47=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl::SyncMobilePayments(System.Collections.Generic.IEnumerable{[iRely.MobileBilling.Model]iRely.MobileBilling.Model.vyuMBILPayment})" Target="#48=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl+&lt;SyncMobilePayments&gt;d__4::MoveNext()" />
+  <Evolution Source="#49=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl::PostPayment(System.String, System.Boolean, System.Boolean, System.Int32)" Target="#50=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.PaymentBl+&lt;PostPayment&gt;d__5::MoveNext()" />
+  <Evolution Source="#51=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OutOfGasBl::GetAsync(iRely.Common.GetParameter)" Target="#52=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OutOfGasBl+&lt;GetAsync&gt;d__1::MoveNext()" />
+  <Evolution Source="#53=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OutOfGasBl::AddRecord(System.Collections.Generic.IEnumerable{[iRely.MobileBilling.Model]iRely.MobileBilling.Model.tblMBILOutOfGas}, System.Boolean)" Target="#54=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OutOfGasBl+&lt;AddRecord&gt;d__2::MoveNext()" />
+  <Evolution Source="#55=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl::GetOrder(System.Int32)" Target="#56=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl+&lt;GetOrder&gt;d__1::MoveNext()" />
+  <Evolution Source="#57=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl::GetOrderItem(System.Int32)" Target="#58=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl+&lt;GetOrderItem&gt;d__2::MoveNext()" />
+  <Evolution Source="#59=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl::GetOrderTaxCode(System.Int32)" Target="#60=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl+&lt;GetOrderTaxCode&gt;d__3::MoveNext()" />
+  <Evolution Source="#61=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl::GenerateExport(System.Int32, System.String, System.String)" Target="#62=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl+&lt;GenerateExport&gt;d__4::MoveNext()" />
+  <Evolution Source="#63=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl::GetExportFiles()" Target="#64=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.OrderBl+&lt;GetExportFiles&gt;d__5::MoveNext()" />
+  <Evolution Source="#65=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ExportBl::AddRecord(System.Collections.Generic.IEnumerable{[iRely.MobileBilling.Model]iRely.MobileBilling.Model.tblMBILExportFiles}, System.Boolean)" Target="#66=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ExportBl+&lt;AddRecord&gt;d__1::MoveNext()" />
+  <Evolution Source="#67=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ExportBl::GetExportFiles()" Target="#68=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ExportBl+&lt;GetExportFiles&gt;d__2::MoveNext()" />
+  <Class Class="#69=T:[PostSharp.Patterns.Diagnostics]PostSharp.Patterns.Diagnostics.LogAttribute">
+    <Instance Declaration="#70=A:iRely.MobileBilling.BusinessLayer" Id="a859ab8278abdc6f">
+      <Target Target="#71=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.Common::GetStartingNumber([iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.Common+StartingNumber)">
+        <JoinPoint Advising="#69" Description="#72=Adds logging" Ordinal="0" LinesAvoided="6" />
+      </Target>
+      <Target Target="#1">
+        <JoinPoint Advised="#2" Advising="#69" Description="#72" LinesAvoided="8" />
+      </Target>
+      <Target Target="#3">
+        <JoinPoint Advised="#4" Advising="#69" Description="#72" Ordinal="2" LinesAvoided="8" />
+      </Target>
+      <Target Target="#5">
+        <JoinPoint Advised="#6" Advising="#69" Description="#72" Ordinal="3" LinesAvoided="8" />
+      </Target>
+      <Target Target="#7">
+        <JoinPoint Advised="#8" Advising="#69" Description="#72" Ordinal="4" LinesAvoided="8" />
+      </Target>
+      <Target Target="#9">
+        <JoinPoint Advised="#10" Advising="#69" Description="#72" Ordinal="5" LinesAvoided="8" />
+      </Target>
+      <Target Target="#11">
+        <JoinPoint Advised="#12" Advising="#69" Description="#72" Ordinal="6" LinesAvoided="8" />
+      </Target>
+      <Target Target="#13">
+        <JoinPoint Advised="#14" Advising="#69" Description="#72" Ordinal="7" LinesAvoided="8" />
+      </Target>
+      <Target Target="#15">
+        <JoinPoint Advised="#16" Advising="#69" Description="#72" Ordinal="8" LinesAvoided="8" />
+      </Target>
+      <Target Target="#17">
+        <JoinPoint Advised="#18" Advising="#69" Description="#72" Ordinal="9" LinesAvoided="8" />
+      </Target>
+      <Target Target="#19">
+        <JoinPoint Advised="#20" Advising="#69" Description="#72" Ordinal="10" LinesAvoided="8" />
+      </Target>
+      <Target Target="#21">
+        <JoinPoint Advised="#22" Advising="#69" Description="#72" Ordinal="11" LinesAvoided="8" />
+      </Target>
+      <Target Target="#23">
+        <JoinPoint Advised="#24" Advising="#69" Description="#72" Ordinal="12" LinesAvoided="8" />
+      </Target>
+      <Target Target="#25">
+        <JoinPoint Advised="#26" Advising="#69" Description="#72" Ordinal="13" LinesAvoided="8" />
+      </Target>
+      <Target Target="#27">
+        <JoinPoint Advised="#28" Advising="#69" Description="#72" Ordinal="14" LinesAvoided="8" />
+      </Target>
+      <Target Target="#29">
+        <JoinPoint Advised="#30" Advising="#69" Description="#72" Ordinal="15" LinesAvoided="8" />
+      </Target>
+      <Target Target="#31">
+        <JoinPoint Advised="#32" Advising="#69" Description="#72" Ordinal="16" LinesAvoided="8" />
+      </Target>
+      <Target Target="#33">
+        <JoinPoint Advised="#34" Advising="#69" Description="#72" Ordinal="17" LinesAvoided="8" />
+      </Target>
+      <Target Target="#35">
+        <JoinPoint Advised="#36" Advising="#69" Description="#72" Ordinal="18" LinesAvoided="8" />
+      </Target>
+      <Target Target="#37">
+        <JoinPoint Advised="#38" Advising="#69" Description="#72" Ordinal="19" LinesAvoided="8" />
+      </Target>
+      <Target Target="#39">
+        <JoinPoint Advised="#40" Advising="#69" Description="#72" Ordinal="20" LinesAvoided="8" />
+      </Target>
+      <Target Target="#41">
+        <JoinPoint Advised="#42" Advising="#69" Description="#72" Ordinal="21" LinesAvoided="8" />
+      </Target>
+      <Target Target="#43">
+        <JoinPoint Advised="#44" Advising="#69" Description="#72" Ordinal="22" LinesAvoided="8" />
+      </Target>
+      <Target Target="#45">
+        <JoinPoint Advised="#46" Advising="#69" Description="#72" Ordinal="23" LinesAvoided="8" />
+      </Target>
+      <Target Target="#47">
+        <JoinPoint Advised="#48" Advising="#69" Description="#72" Ordinal="24" LinesAvoided="8" />
+      </Target>
+      <Target Target="#49">
+        <JoinPoint Advised="#50" Advising="#69" Description="#72" Ordinal="25" LinesAvoided="8" />
+      </Target>
+      <Target Target="#51">
+        <JoinPoint Advised="#52" Advising="#69" Description="#72" Ordinal="26" LinesAvoided="8" />
+      </Target>
+      <Target Target="#53">
+        <JoinPoint Advised="#54" Advising="#69" Description="#72" Ordinal="27" LinesAvoided="8" />
+      </Target>
+      <Target Target="#55">
+        <JoinPoint Advised="#56" Advising="#69" Description="#72" Ordinal="28" LinesAvoided="8" />
+      </Target>
+      <Target Target="#57">
+        <JoinPoint Advised="#58" Advising="#69" Description="#72" Ordinal="29" LinesAvoided="8" />
+      </Target>
+      <Target Target="#59">
+        <JoinPoint Advised="#60" Advising="#69" Description="#72" Ordinal="30" LinesAvoided="8" />
+      </Target>
+      <Target Target="#61">
+        <JoinPoint Advised="#62" Advising="#69" Description="#72" Ordinal="31" LinesAvoided="8" />
+      </Target>
+      <Target Target="#63">
+        <JoinPoint Advised="#64" Advising="#69" Description="#72" Ordinal="32" LinesAvoided="8" />
+      </Target>
+      <Target Target="#65">
+        <JoinPoint Advised="#66" Advising="#69" Description="#72" Ordinal="33" LinesAvoided="8" />
+      </Target>
+      <Target Target="#67">
+        <JoinPoint Advised="#68" Advising="#69" Description="#72" Ordinal="34" LinesAvoided="8" />
+      </Target>
+      <Target Target="#73=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ConnectionManager::GetRepository()">
+        <JoinPoint Advising="#69" Description="#72" Ordinal="35" LinesAvoided="6" />
+      </Target>
+      <Target Target="#74=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.ConnectionManager::GetEntity()">
+        <JoinPoint Advising="#69" Description="#72" Ordinal="36" LinesAvoided="6" />
+      </Target>
+      <Target Target="#75=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.SQL.DAL::Fill(System.String)">
+        <JoinPoint Advising="#69" Description="#72" Ordinal="37" LinesAvoided="6" />
+      </Target>
+      <Target Target="#76=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.SQL.DAL::ExecNonQuery(System.String)">
+        <JoinPoint Advising="#69" Description="#72" Ordinal="38" LinesAvoided="6" />
+      </Target>
+      <Target Target="#77=M:[iRely.MobileBilling.BusinessLayer]iRely.MobileBilling.BusinessLayer.SQL.DAL::Insert(System.String)">
+        <JoinPoint Advising="#69" Description="#72" Ordinal="39" LinesAvoided="6" />
+      </Target>
+    </Instance>
+  </Class>
+</Symbols>

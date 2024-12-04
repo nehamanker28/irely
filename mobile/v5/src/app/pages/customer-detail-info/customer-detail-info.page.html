@@ -1,0 +1,194 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-button slot="end" primary (click)="showInvoice()" >
+      Create Invoice
+    </ion-button>
+    <ion-button slot="end" primary (click)="showPayment()" >
+      Create Payment
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-list style="margin-bottom: 0px;">
+      <p *ngIf="customer['dblCreditLimit'] <= 0" style="position:absolute;margin-left: 70%;" class="blink_me">Cash on delivery (COD)</p>
+      <ion-list-header class="customer-details-header">
+          <h1>Customer</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="2" style="justify-content: left;">
+              <p>Name:</p>
+            </ion-col>
+            <ion-col size="10" style="justify-content: left;">
+              <p><b>{{customer['strCustomerName']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="2" style="justify-content: left;">
+              <p>Phone:</p>
+            </ion-col>
+            <ion-col size="4" style="justify-content: left;">
+              <p><b>{{customer['strPhone1']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="2" style="justify-content: left;">
+              <p>Email:</p>
+            </ion-col>
+            <ion-col size="4" style="justify-content: left;">
+              <p><b>{{customer['strEmail']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="2" style="justify-content: left;">
+              <p>Billing Address:</p>
+            </ion-col>
+            <ion-col size="8" style="justify-content: left;">
+              <p><b>{{customer['strBillToAddress']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="2" style="justify-content: left;">
+              <p>Billing City, State, Zip:</p>
+            </ion-col>
+            <ion-col size="8" style="justify-content: left;">
+              <p><b>{{customer['strBillToCity']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="2" style="justify-content: left;">
+              <p>Notes:</p>
+            </ion-col>
+            <ion-col size="10" style="justify-content: left;">
+              <p><b>{{customer['strInternalNotes']}} &nbsp;</b></p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+    <ion-list style="margin-bottom: 0px;">
+      <ion-list-header class="customer-details-header">
+        <h1>AR</h1>
+      </ion-list-header>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Credit Limit:</p>
+            </ion-col>
+            <ion-col size="2" style="justify-content: left;">
+              <p><b>{{customer['dblCreditLimit']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Current Balance:</p>
+            </ion-col>
+            <ion-col size="4" style="justify-content: left;">
+              <p><b>&nbsp; {{customer['dblTotalDue']}}</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>31+ Days Amt:</p>
+            </ion-col>
+            <ion-col size="2" style="justify-content: left;">
+              <p><b>{{customer['dbl31DaysAmountDue']}} &nbsp;</b></p>
+            </ion-col>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Last Payment:</p>
+            </ion-col>
+            <ion-col size="4" style="justify-content: left;">
+              <p><b>&nbsp; {{customer['dtmLastPaymentDate']}}</b></p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="3" style="justify-content: left;">
+              <p>Split With:</p>
+            </ion-col>
+            <ion-col size="2" style="justify-content: left;">
+              <p><b>{{customer['dbl31DaysAmountDue']}} &nbsp;</b></p>
+            </ion-col>
+            <!-- <ion-col size="3" style="justify-content: left;">
+              <p>Last Payment Date:</p>
+            </ion-col>
+            <ion-col size="4" style="justify-content: left;">
+              <p><b>&nbsp; {{customer['dtmLastPaymentDate']}}</b></p>
+            </ion-col> -->
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+      <!-- <ion-item>
+        <ion-label stacked>Credit Limit</ion-label>
+        <ion-input type="text" value={{customer['dblCreditLimit']}}></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Current Balance</ion-label>
+        <ion-input type="text" value={{customer['dblTotalDue']}}></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>31+ Days Amount</ion-label>
+        <ion-input type="text" value={{customer['dbl31DaysAmountDue']}}></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Last Payment Date</ion-label>
+        <ion-input type="text" value={{customer['dtmLastPaymentDate']}}></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Last Payment Amount</ion-label>
+        <ion-input type="text" value={{customer['dblLastPayment']}}></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Split With</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Split Percentage</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item> -->
+    </ion-list>
+    <ion-list style="margin-bottom: 0px;" *ngIf="sites.length > 0">
+      <ion-list-header class="customer-details-header">
+        <h1>Sites</h1>
+      </ion-list-header>
+      <ion-item *ngFor="let site of sites" (click)="selectConsumptionSite(site)">
+        <table>
+          <td width="120px">
+            <p>Site No:</p>
+            <p>Description:</p>
+            <p>Site Address:</p>
+            <p>City, State, Zip:</p>
+            <p>Item No:</p>
+            <p>Fill Method:</p>
+            <p>Terms:</p>
+            <!-- <p>Last Delivery Date:</p>
+            <p>Last Delivery Qty:</p> -->
+            <p>Device Type:</p>
+            <p>Serial No:</p>
+            <p>Capacity:</p>
+            <p>Instruction:</p>
+          </td>
+          <td style="padding-left:10px">
+            <p><b>{{site.intSiteNumber || ' '}} &nbsp; </b></p>
+            <p><b>{{site.strDescription || ' '}} &nbsp; </b></p>
+            <p><b>{{site.strSiteAddress || ' '}} &nbsp; </b></p>
+            <p><b>{{site.strCity || ' '}}, {{site.strState || ' '}}, {{site.strZipCode || ' '}} &nbsp; </b></p>
+            <p><b>{{site.strItemNo || ' '}} &nbsp; </b></p>
+            <p><b>{{site.strFillMethod || ' '}} &nbsp; </b></p>
+            <p><b>{{site.strDeliveryTerm || ' '}} &nbsp; </b></p>
+            <!-- <p><b>Not yet implemented</b></p>
+            <p><b>Not yet implemented</b></p> -->
+            <p><b>{{site.strDeviceType || ' '}} &nbsp; </b></p>
+            <p><b>{{site.strSerialNumber || ' '}} &nbsp; </b></p>
+            <p><b>{{site.dblTankCapacity || ' '}} &nbsp; </b></p>
+            <p><b>{{site.strInstruction || ' '}} &nbsp; </b></p>
+          </td>
+
+        </table>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

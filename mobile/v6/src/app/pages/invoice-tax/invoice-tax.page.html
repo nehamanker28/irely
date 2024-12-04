@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">Item Taxes - {{itemNo}}</ion-title>
+    <ion-button slot="end" primary (click)="deleteTax()">Delete</ion-button>          
+    <ion-button slot="end" primary (click)="closeTax()">Ok</ion-button>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row style="font-weight: bold; margin-bottom: 10px; margin-top: 5px;">
+    <ion-col size="2">
+      Tax Group
+    </ion-col>
+    <ion-col size="2.5">
+      Tax Code
+    </ion-col>
+    <ion-col size="1.5">
+      Rate
+    </ion-col>
+    <ion-col size="1">
+      Qty
+    </ion-col>
+    <ion-col size="1.5">
+      Price
+    </ion-col>
+    <ion-col size="1.5">
+      Total
+    </ion-col>
+    <ion-col size="2">
+      Tax Amount
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let tax of taxes">
+    <ion-col size="2">
+      <ion-checkbox color="primary" [(ngModel)]="tax['ysnSelected']"></ion-checkbox>
+      {{tax.strTaxCode}}
+    </ion-col>
+    <ion-col size="2.5">
+      {{tax.strTaxCode}}
+    </ion-col>
+    <ion-col size="1.5" *ngIf="tax.strCalculationMethod === 'Unit'">
+      {{tax.dblRate}}
+    </ion-col>
+    <ion-col size="1.5" *ngIf="tax.strCalculationMethod === 'Percentage'">
+      {{tax.dblRate}}%
+    </ion-col>
+    <ion-col size="1">
+      {{qty}}
+    </ion-col>
+    <ion-col size="1.5">
+      {{price}}
+    </ion-col>
+    <ion-col size="1.5">
+      {{(qty * price).toFixed(2)}}
+    </ion-col>
+    <ion-col *ngIf="tax.strCalculationMethod === 'Unit'" size="2">
+      {{tax.dblTotalTax}}
+    </ion-col>
+    <ion-col *ngIf="tax.strCalculationMethod === 'Percentage'" size="2">
+      {{tax.dblTotalTax}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+
+<ion-footer padding>
+  <ion-button slot="end" primary (click)="closeTax()">Ok</ion-button>    
+</ion-footer>

@@ -1,0 +1,157 @@
+<ion-content padding>
+  <ion-list style="margin-bottom: 0px;">
+    <ion-list-header class="customer-details-header">
+      <h1>Customer</h1>
+    </ion-list-header>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2 style="justify-content: left;">
+            <p>Name:</p>                            
+          </ion-col>
+          <ion-col col-10 style="justify-content: left;">
+            <p><b>{{customer.strCustomerName}} &nbsp;</b></p>                       
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2 style="justify-content: left;">
+            <p>Phone:</p>                            
+          </ion-col>
+          <ion-col col-4 style="justify-content: left;">
+            <p><b>{{customer.strPhone}} &nbsp;</b></p>                       
+          </ion-col>
+          <ion-col col-2 style="justify-content: left;">
+            <p>Email:</p>                            
+          </ion-col>
+          <ion-col col-4 style="justify-content: left;">
+            <p><b>{{customer.strEmail}} &nbsp;</b></p>                       
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2 style="justify-content: left;">
+            <p>Billing Address:</p>                            
+          </ion-col>
+          <ion-col col-8 style="justify-content: left;">
+            <p><b>{{customer.strBillToAddress}} &nbsp;</b></p>                       
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2 style="justify-content: left;">
+            <p>City, State, Zip:</p>                            
+          </ion-col>
+          <ion-col col-8 style="justify-content: left;">
+            <p><b>{{customer.strBillToCity}} &nbsp;</b></p>                       
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-2 style="justify-content: left;">
+            <p>Notes:</p>                            
+          </ion-col>
+          <ion-col col-10 style="justify-content: left;">
+            <p><b>{{customer.strInternalNotes}} &nbsp;</b></p>                       
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  <ion-list style="margin-bottom: 0px;">
+    <ion-list-header class="customer-details-header">
+      <h1>AR</h1>
+    </ion-list-header>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3 style="justify-content: left;">
+            <p>Credit Limit:</p>                            
+          </ion-col>
+          <ion-col col-2 style="justify-content: left;">
+            <p><b>{{customer.dblCreditLimit}} &nbsp;</b></p>                       
+          </ion-col>
+          <ion-col col-3 style="justify-content: left;">
+            <p>Current Balance:</p>                            
+          </ion-col>
+          <ion-col col-4 style="justify-content: left;">
+            <p><b>&nbsp; {{customer.dblTotalDue}}</b></p>                       
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3 style="justify-content: left;">
+            <p>31+ Days Amount:</p>                            
+          </ion-col>
+          <ion-col col-2 style="justify-content: left;">
+            <p><b>{{customer.dbl31DaysAmountDue}} &nbsp;</b></p>                       
+          </ion-col>
+          <ion-col col-3 style="justify-content: left;">
+            <p>Last Payment Date:</p>                            
+          </ion-col>
+          <ion-col col-4 style="justify-content: left;">
+            <p><b>&nbsp; {{customer.dtmLastPaymentDate}}</b></p>                       
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3 style="justify-content: left;">
+            <p>Split With:</p>                            
+          </ion-col>
+          <ion-col col-2 style="justify-content: left;">
+            <p><b>{{customer.dbl31DaysAmountDue}} &nbsp;</b></p>                       
+          </ion-col>
+          <!-- <ion-col col-3 style="justify-content: left;">
+            <p>Last Payment Date:</p>                            
+          </ion-col>
+          <ion-col col-4 style="justify-content: left;">
+            <p><b>&nbsp; {{customer.dtmLastPaymentDate}}</b></p>                       
+          </ion-col> -->
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  <ion-list style="margin-bottom: 0px;">
+    <ion-list-header class="customer-details-header">
+      <h1>Sites</h1>
+    </ion-list-header>
+    <ion-item style="border-bottom:1px;border-style:solid;border-bottom-color: lightgray;" *ngFor="let site of sitesAndHistory" >
+      <table>                  
+        <td>
+          <p>Site No:</p>
+          <p>Description:</p>
+          <p>Site Address:</p>
+          <p>City, State, Zip:</p>
+          <p>Item No:</p>
+          <p>Fill Method:</p>
+          <p>Terms:</p>
+          <p>Type:</p>
+          <p>Serial No:</p>
+          <p>Capacity:</p>
+        </td>
+        <td style="padding-left:10px">
+          <p><b>{{site.intSiteNumber || ' '}} &nbsp; </b></p>
+          <p><b>{{site.strDescription || ' '}} &nbsp; </b></p>                 
+          <p><b>{{site.strSiteAddress || ' '}} &nbsp; </b></p>
+          <p><b>{{site.strCity || ' '}}, {{site.strState || ' '}}, {{site.strZipCode || ' '}} &nbsp; </b></p>
+          <p><b>{{site.strItemNo || ' '}} &nbsp; </b></p>
+          <p><b>{{site.strFillMethod || ' '}} &nbsp; </b></p>
+          <p><b>{{site.strDeliveryTerm || ' '}} &nbsp; </b></p>
+          <p><b>{{site.strDeviceType || ' '}} &nbsp; </b></p>
+          <p><b>{{site.strSerialNumber || ' '}} &nbsp; </b></p>
+          <p><b>{{site.dblTankCapacity || ' '}} &nbsp; </b></p>
+        </td>        
+      </table>
+      <br>
+      <ion-list-header class="customer-details-header">
+        <h2>Delivery History</h2>
+      </ion-list-header>
+      <ion-item style="border-top:1px;border-style:solid;border-top-color: lightgray;" *ngFor="let history of site.tblSiteHistory" >
+        <table style="padding-left: 100px">                  
+          <td>
+            <p>Quantity:</p>
+            <p>Date Delivered:</p>
+          </td>
+          <td style="padding-left:10px">
+            <p><b>{{history.dblQuantityDelivered || ' '}} &nbsp; </b></p>
+            <p><b>{{history.dtmInvoiceDate || ' '}} &nbsp; </b></p>
+          </td>        
+        </table>
+      </ion-item>
+    </ion-item>                    
+  </ion-list>
+</ion-content>

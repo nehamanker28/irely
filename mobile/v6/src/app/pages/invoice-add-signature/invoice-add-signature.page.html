@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar box-shadow" >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-grid no-padding>
+      <ion-row>        
+        <ion-col col-auto></ion-col>
+        <ion-col size="2.5">
+          <ion-button ion-button expand="block" size="large"primary [disabled]="isCanvasBlank()" (click)="save()" class="button-global"> Save </ion-button>          
+        </ion-col>
+        <ion-col size="2">
+          <ion-button ion-button expand="block" size="large"primary (click)="undo()" class="button-global"> Undo </ion-button>          
+        </ion-col>
+        <ion-col size="2">
+          <ion-button ion-button expand="block" size="large"primary (click)="clear()" class="button-global"> Clear </ion-button>          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="signature-pad">
+    <div>
+      <canvas class="signature-pad-canvas" #canvas width="900" height="400" style="touch-action: none;"></canvas>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Update Table</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-grid>
+    <ion-row justify-content-start>
+      <ion-col size="3" text-left><ion-label text-left><b>Table Name</b></ion-label></ion-col>
+      <ion-col size="3" text-left><ion-label><b>Last Update</b></ion-label></ion-col>
+      <ion-col size="3" text-left><ion-label><b>Include on Sync All</b></ion-label></ion-col>
+      <ion-col size="3" text-left></ion-col>
+    </ion-row>
+    <ion-row justify-content-start *ngFor="let item of data; let i=index" >
+      <ion-col size="3" text-left *ngIf="item.ysnVisible === 'true'" >
+        <ion-label>{{item.strDisplayName}}</ion-label>          
+      </ion-col>
+      <ion-col size="3" text-left *ngIf="item.ysnVisible === 'true'" >
+        <ion-label>{{item.dtmTableLastUpdated}}</ion-label>          
+      </ion-col>
+      <ion-col size="3" text-left *ngIf="item.ysnVisible === 'true'" >
+        <ion-toggle [(ngModel)]="item['ysnIncludeSyncAll']" checked="item['ysnIncludeSyncAll']" color="primary"></ion-toggle>
+      </ion-col>
+      <ion-col size="3" text-left *ngIf="item.ysnVisible === 'true'" >
+        <ion-button ion-button expand="block" primary size="large"item-end icon-left (click)="updateData(item)">
+          <ion-icon name="cloud-download-outline" style="margin-right: 5px;"></ion-icon>
+          Update
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

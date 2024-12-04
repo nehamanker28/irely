@@ -1,0 +1,31 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-title *ngIf="!showSearchbar">Customer List</ion-title>
+    <ion-searchbar #txtSearch  *ngIf="showSearchbar" showCancelButton="always" [(ngModel)]="searchValue" (ionChange)="getCustomerList()" (ionCancel)="showSearchbar = false" placeholder="Search" [debounce]="2000"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!showSearchbar" (click)="showSearchbar = true">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-list #scheduleList>
+
+    <ion-item-sliding *ngFor="let item of data; let i=index" #slidingItem >
+      <ion-item (click)="showCustomerDetails(item)">
+        <ion-label class="customer">
+          <h3><b>{{i+1}}). {{item.strCustomerName}} &mdash; {{item.strCustomerNumber}}</b></h3>
+          <p>
+            <b>Bill To:</b> {{item.strBillToAddress}}, {{item.strBillToCity}}, {{item.strBillToState}}, {{item.strBillToZipCode}}
+          </p>
+          <p>
+            <b>Email:</b> {{item.strEmail}} &mdash; <b>Phone:</b> {{item.strPhone1}}
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+
+  </ion-list>
+</ion-content>

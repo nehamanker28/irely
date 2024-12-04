@@ -1,0 +1,138 @@
+.ios, .wp, .md {
+    page-login-main {
+      img {
+        margin: auto;
+        display: block;
+      }
+  
+      .loginlabel {
+        -webkit-flex: 0 0 20px;
+        -ms-flex: 0 0 20px;
+        flex: 0 0 20px !important;
+        width: 20px !important;
+        min-width: 20px !important;
+        max-width: 20px !important;
+      }
+  
+      .image-div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+  
+      .connection-label {
+        text-align: center;
+        margin-top: 35px;
+      }
+  
+      .clear-button {
+        font-size: 13px;
+      }
+  
+      .forgot-login-button {
+        text-align: center;
+        margin-top: 20px;
+      }
+  
+      .change-connection-button {
+        text-align: center;
+      }
+  
+      .outer-content .item {
+        color: black; //gray
+        background-color: #fff;    //233645
+      }
+  
+      .list-ios > .item-block:first-child {
+        border-top: none;
+        border-bottom: 0.55px solid gray; //edf1f2
+      }
+  
+      .list-ios > .item-block:last-child {
+        border-bottom: 0.55px solid gray; //5a5a5d
+      }
+  
+      .page-login .item-inner {
+        border-bottom: 0.55px solid gray !important; //5a5a5d
+      }
+  
+      .page-login .text-input {
+        color: black; //white
+      }
+  
+      .page-login .select-text {
+        color: black; //white
+      }
+  
+      .scroll-content {
+        background-color: white; //233645
+      }
+  
+      
+      
+  
+  
+  
+      ion-content {
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-color: transparent;
+      }
+      .scroll-content {
+        margin-top: 0 !important;
+      }
+    
+      .logo {
+        // width: 70%;
+        height: auto;
+        padding-top: 2vh;
+        margin-bottom: 5vh;
+      }
+      // span {
+      //   color: black; //white
+      // }
+      .submit-box{
+        margin-top: 10px;
+        text-align: center;
+      }
+    
+      .error-message .item-inner{
+        border-bottom-color:  transparent !important;
+        box-shadow: inset 0 -1px 0 0  transparent !important;
+      }
+      .error-message p{
+        text-align: right;
+        color:black; //white
+      }
+      ion-item {
+        color: black !important; //white
+        padding-left: 0px !important;
+        // margin-bottom: 10px;
+        background-color: transparent !important;
+        font-size: 0.9em;
+      }
+      .item-inner{
+        border-bottom: 1px solid black !important; //white
+        box-shadow: inset 0 -1px 0 transparent; 
+      }
+      ::-webkit-input-placeholder {
+        color: black !important; //white
+      }
+      .login-container {
+        color: black; //white
+        position: absolute;
+        top: 0;
+        padding: 10vw;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 2;
+      }
+      ion-button {
+        opacity: 0.8;
+      }
+  
+      
+  
+  
+    }
+}

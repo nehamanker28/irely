@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="!showSearchbar">Order List</ion-title>
+    <ion-searchbar #txtSearch  *ngIf="showSearchbar" showCancelButton="always" [(ngModel)]="searchValue" (ionChange)="getOrderList()" (ionCancel)="showSearchbar = false" placeholder="Search" [debounce]="2000"></ion-searchbar>
+
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!showSearchbar" (click)="showSearchbar = true">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+      <ion-button color="primary" (click)="receiveOrder()" fill="outline">Refresh Order</ion-button> 
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="order_status">
+      <ion-segment-button (click)="sortFilter('Open')" value="pending">
+        Pending
+      </ion-segment-button>
+      <ion-segment-button (click)="sortFilter('Delivered')" value="complete">
+        Complete
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-list #scheduleList>
+
+    <ng-container *ngFor="let item of data; let i=index">
+      <ion-list-header *ngIf="item.strRouteId2 == 'XXX'">
+        <ion-label>
+          <h1>Route #{{item.strRouteId}}</h1>
+        </ion-label>
+      </ion-list-header>
+      <ion-list-header *ngIf="item.strRouteId2 == 'NOROUTE' && item.intSequence == 1">
+        <ion-label>
+          <h1>No Route</h1>
+        </ion-label>
+      </ion-list-header>
+    <ion-item-sliding  #slidingItem [attr.track]="item.strOrderStatus | lowercase">      
+      <ion-item (click)="showOrderDetails(item)">
+        <ion-label class="item.strOrderStatus | lowercase">
+          <h3><b *ngIf="item.strRouteId2 != 'NOROUTE'">Seq #{{item.intSequence}}&nbsp;-&nbsp;</b> <b>{{item.strOrderNumber}} &mdash; {{item.strCustomerName}} &mdash; {{item.strCustomerNumber}}</b><ion-badge *ngIf="item.strOrderStatus == 'NEW'" color="warning">NEW</ion-badge></h3>
+          <p>
+            <b>Site Description:</b> {{item.strDescription}}
+          </p>
+          <p>
+            <b>Site Address:</b> {{item.strSiteAddress}}, {{item.strCity}}, {{item.strState}}, {{item.strZipCode}}
+          </p>
+          <p>
+            <b>Item:</b> {{item.strItemNo}} &mdash; <b>Quantity:</b> {{item.dblQuantity}}
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-item-sliding>
+  </ng-container>
+
+  </ion-list>
+</ion-content>

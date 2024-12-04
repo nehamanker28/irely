@@ -1,0 +1,141 @@
+page-menu-main {
+  $primary: color($colors, primary);
+
+  .menu-label {
+    background-color: $primary;
+    border-color: whitesmoke;
+    border-style: solid;
+    border-width: thin;
+    color: whitesmoke;
+    font-size: larger;
+    font-weight: bold;
+  }
+  
+  ion-grid {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;  
+  }
+
+  ion-grid ion-row {
+    flex: 1;
+    display: flex;
+  }
+  ion-row ion-col {
+    flex: 1;
+    flex-grow: 1;
+    color: #fff;
+    
+    /* Flex for these containers (cells) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  ion-grid ion-icon {
+    font-size: 60px;
+  }
+  page-menu-main .ion-icon-menu {
+    font-size: 65px !important;
+  }
+  .ion-icon-menu {
+    font-size: 4.4em !important;
+  }
+  // ion-item:first-child {
+  //   border-top-left-radius: 5px;
+  //   border-top-right-radius: 5px;
+  //   background-color: rgba(255, 255, 255, 0.5);
+  // }
+  // ion-item:last-child {
+  //   border-bottom-left-radius: 5px;
+  //   border-bottom-right-radius: 5px;
+  //   background-color: rgba(255, 255, 255, 0.5);
+  // }
+  // ion-item.item {
+  //     background-color: rgba(255, 255, 255, 0.5);
+  //     margin-bottom: 1px;
+  //     .label {
+  //         width: 25%;
+  //         color: rgba(0, 0, 0, 0.6);
+  //         font-size: 1.2em;
+  //     }
+  // }
+  // ion-content {
+  //     background-image: linear-gradient(rgba(12, 83, 141, 0.5), rgba(255,255,255,.5))
+  // }  
+  // /* doesn't matter */
+  // // .bar-header {
+  // //   background-color: #241D54 !important;
+  // //   border-bottom: 0 !important;
+  // // }
+  // // .bar-header h1 {
+  // //   color: #fff !important;
+  // //   font-size: 20px !important;
+  // // }  
+  // // .cell-row-1 {
+  // //   background-color: #000;
+  // // }
+  // // .cell-row-2 {
+  // //   background-color: #ccc;
+  // // }
+  // // .cell-row-3 {
+  // //   background-color: #eee;
+  // // }
+  
+  // // .dark-blue {
+  // //   background-color: #233645;
+  // // }
+  // // .purple {
+  // //   background-color: #3f51b5; //0059B2
+  // // }
+  // // .home {
+  // //   background-color: #488aff;
+  // // }
+  // // .shift {
+  // //   background-color: rgba(246, 189, 12, 1); //rgba(136, 154, 204, 1); //0059B2
+  // // }
+  // // .order {
+  // //   background-color: rgb(252, 130, 67); //#7d3fb5;
+  // // }
+  // // .customer {
+  // //   background-color: rgb(139, 195, 68); //rgb(255, 19, 68); //#ff9c48; //0059B2
+  // // }
+  // // .completedinvoices {
+  // //   background-color: rgb(205, 123, 221); //#a3b53f;
+  // // }
+  // // .recievepayments {
+  // //   background-color: #447dc3; //#b53f4a; //0059B2
+  // // }
+  // // .configuration {
+  // //   background-color: #d05757; //rgb(0, 124, 220); //#b53f9c;
+  // // }
+  // // .profile {
+  // //   background-color: #233645; //#3f51b5; //0059B2
+  // // }  
+  // // .menu-global {
+  // //   background-color: #233645;
+  // //   border-color: #152f44;
+  // //   border-style: solid;
+  // //   border-width: thin;
+  // //   color: #fffefec7;
+  // //   border-top-left-radius: 10px;
+  // //   border-top-right-radius: 10px;
+  // //   border-bottom-left-radius: 10px;
+  // //   border-bottom-right-radius: 10px;
+  // // }
+  // // .menu-label-global {
+  // //   font-size: large;
+  // // }
+  // // .menu-icon-global {
+  // //   font-size: 70px;
+  // // }
+  // // .menu-global-active {
+  // //   background-color: #395e7b;
+  // //   border-color: #152f44;
+  // //   border-style: solid;
+  // //   border-width: thin;
+  // //   text-shadow: 2px 2px #152f44;
+  // //   color: #ffffffe3
+  // // }  
+}

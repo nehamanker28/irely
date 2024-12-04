@@ -1,0 +1,56 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <img src="assets/irely/irely-w3.png" class="button button-icon button-clear" style="height: 55px; padding-left: 20px" menuToggle>
+    <ion-title>
+      Configurations
+    </ion-title>    
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Defaults
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="person" item-start color="blue"></ion-icon>
+      <ion-label>New Customer No</ion-label>
+      <ion-note item-end style="color: black !important">{{data.strDefaultCustomerNo}}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="pin" item-start color="blue"></ion-icon>
+      <ion-label>New Site No</ion-label>  
+      <ion-note item-end style="color: black !important">{{data.strDefaultSiteNo}}</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Data Tables
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="logo-buffer" item-start color="blue"></ion-icon>
+      <ion-label>Update Tables</ion-label>
+      <button ion-button large style="width: 300px !important" (click)="openPage('UpdateTablePage')" item-end>Open</button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="grid" item-start color="blue"></ion-icon>
+      <ion-label>View Tables</ion-label>
+      <button ion-button large style="width: 300px !important" (click)="openPage('ViewTablePage')" item-end>Open</button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="grid" item-start color="blue"></ion-icon>
+      <ion-label>Refresh Schema</ion-label>
+      <button ion-button large style="width: 300px !important" (click)="refreshTable()" item-end>Refresh</button>
+    </ion-item>
+  </ion-list> 
+  <ion-list>
+    <ion-list-header>
+      LCR Connection
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="ios-bluetooth" item-start color="blue"></ion-icon>
+      <ion-label>Device Meter</ion-label>
+      <button ion-button large style="width: 300px !important" (click)="openPage('MeterDevicePage')" item-end>Connect</button>
+    </ion-item>
+  </ion-list> 
+</ion-content>

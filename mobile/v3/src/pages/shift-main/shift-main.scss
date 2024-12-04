@@ -1,0 +1,46 @@
+page-shift-main {
+    // .menu-global {
+    //     background-color: #0a587d;
+    // }
+    // .menu-global-active {
+    //     background-color: #3ebefb; //0059B2
+    // }
+
+    // .order {
+    //     background-color: rgba(246, 189, 12, 1); //#7d3fb5;
+    // }
+    // .item-input {
+    //     font-size: x-large;
+    // }
+    .ion-label {
+        font-size: large;
+    }
+    // .editable-input {
+    //     color: #0fa00f;
+    // }
+    .popover-ios .popover-content {
+        width: 100% !important;
+    }
+    ion-item:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    ion-item:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    ion-item.item {
+        background-color: #fff;
+        .label {
+            width: 25%;
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 1.2em;
+        }
+    }
+    ion-content {
+        background-image: #fff
+    }
+    .control-disabled {
+        background-color: #e0dddd !important
+    }
+}

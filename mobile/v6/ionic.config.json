@@ -1,0 +1,7 @@
+{
+  "name": "MobileBilling",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

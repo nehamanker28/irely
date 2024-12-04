@@ -1,0 +1,79 @@
+export class OrderItem {
+    intOrderItemMobileId: number;
+    intOrderItemId: number;
+    intOrderId: number;
+    strOrderNumber: string;
+    strOrderStatus: string;
+    dtmRequestedDate: Date;
+    intEntityId: number;
+    strCustomerNumber: string;
+    strCustomerName: string;
+    intTermId: number;
+    strTerm: string;
+    strComments: string;
+    intDriverId: number;
+    strDriverNo: string;
+    strDriverName: string;
+    intRouteId: number;
+    strRouteId: string;
+    intStopNumber: number;
+    intSiteId: number;
+    intSiteNumber: number;
+    strSiteDescription: string;
+    strSiteAddress: string;
+    strCity: string;
+    strState: string;
+    strZipCode: string;                            
+    intItemId: number;
+    strItemNo: string;
+    strItemDescription: string;
+    intContractDetailId: number;
+    strContractNumber: string;
+    intContractSeq: number;
+    intItemUOMId: number;
+    strUOM: string;
+    dblQuantity: number;
+    dblPrice: number;
+    dblTotal: number
+
+    public mapping: Object = {
+                                intOrderItemMobileId: 'pk',
+                                intOrderItemId: 'number',
+                                intOrderId: 'number',
+                                strOrderNumber: 'string',
+                                strOrderStatus: 'string',
+                                dtmRequestedDate: 'date',
+                                intEntityId: 'number',
+                                strCustomerNumber: 'string',
+                                strCustomerName: 'string',
+                                intTermId: 'number',
+                                strTerm: 'string',
+                                strComments: 'string',
+                                intDriverId: 'number',
+                                strDriverNo: 'string',
+                                strDriverName: 'string',
+                                intRouteId: 'number',
+                                strRouteId: 'string',
+                                intStopNumber: 'number',
+                                intSiteId: 'number',
+                                intSiteNumber: 'number',
+                                strSiteDescription: 'string',
+                                strSiteAddress: 'string',
+                                strCity: 'string',
+                                strState: 'string',
+                                strZipCode: 'string',                            
+                                intItemId: 'number',
+                                strItemNo: 'string',
+                                strItemDescription: 'string',
+                                intContractDetailId: 'number',
+                                strContractNumber: 'string',
+                                intContractSeq: 'number',
+                                intItemUOMId: 'number',
+                                strUOM: 'string',
+                                dblQuantity: 'number',
+                                dblPrice: 'number',
+                                dblTotal: 'number'
+                            };
+
+    public tablename:string = 'orderitem';
+}

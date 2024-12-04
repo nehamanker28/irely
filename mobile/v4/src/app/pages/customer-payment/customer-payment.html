@@ -1,0 +1,82 @@
+<ion-header>  
+
+  <ion-toolbar color="white" class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row justify-content-start>
+        <ion-col col-2.5></ion-col>
+        <ion-col col-3 style="margin-right: 5px; color: black">
+          <button ion-button block large primary (click)="searchCustomer()" class="button-global">Search Customer</button>
+        </ion-col>
+        <ion-col col-3 style="margin-right: 5px;">
+          <button ion-button block large primary (click)="voidPayment()" class="button-global" [disabled]="!data['ysnCompleted']">Void</button>
+        </ion-col>
+        <ion-col col-3>
+          <button ion-button block large primary (click)="completePayment()" class="button-global">Complete</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px; margin-top: 10px">
+          <ion-label>Payment Number:</ion-label>
+          <ion-input [(ngModel)]="data['strPaymentNo']" type="text"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px; margin-top: 10px">
+          <ion-label>Entity Number:</ion-label>
+          <ion-input [(ngModel)]="data['strCustomerNo']" readonly="true"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Customer Name:</ion-label>
+          <ion-input [(ngModel)]="data['strCustomerName']" readonly="true"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Location Name:</ion-label>
+          <ion-select clearInput interface="popover" [(ngModel)]="data['intLocation']"> 
+              <ion-option *ngFor="let item of location; let i = index;" [selected]="item.intCompanyLocationId == data['intLocation'] ? true : false" [value]="item.intCompanyLocationId">
+                <span>{{item.strLocationName}}</span>
+              </ion-option>
+            </ion-select>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Amount:</ion-label>
+          <ion-input type="number" [(ngModel)]="data['dblPayment']"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Method:</ion-label>
+          <ion-select #method clearInput interface="popover" (ionChange)="methodChange(method.value, currentCustomer)">
+            <ion-option selected="true">Check</ion-option>
+            <ion-option>Cash</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Check Number:</ion-label>
+          <ion-input *ngIf="_isCheck" type="number" [(ngModel)]="data['strCheckNumber']"></ion-input>
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item style="margin-bottom: 10px">
+          <ion-label>Comment:</ion-label>
+          <ion-textarea rows="4" [(ngModel)]="data['strComments']"></ion-textarea>
+        </ion-item>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

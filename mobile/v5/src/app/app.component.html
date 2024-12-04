@@ -1,0 +1,98 @@
+<ion-app [class.dark-theme]="dark">
+  <ion-split-pane contentId="main-content" style="--side-width: 200px">
+
+    <ion-menu contentId="main-content">
+      <ion-content>
+        <ion-list lines="none">
+          <ion-list-header>
+            Activities
+          </ion-list-header>
+          <ion-menu-toggle autoHide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item [routerLink]="p.url" routerLinkActive="selected" routerDirection="root" detail="false">
+              <ion-icon slot="start" [name]="p.icon + '-outline'"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list lines="none">
+          <ion-list-header>
+            Maintenance
+          </ion-list-header>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/tankwagon-inventory" routerLinkActive="selected" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="speedometer-outline"></ion-icon>
+              <ion-label>
+                Tankwagon Inventory
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/invoice-completed" routerLinkActive="selected" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="cash-outline"></ion-icon>
+              <ion-label>
+                Invoice
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/payment-list" routerLinkActive="selected" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="calendar-outline"></ion-icon>
+              <ion-label>
+                Payment
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle autoHide="false">
+            <ion-item routerLink="/pdf-list" routerLinkActive="selected" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="document-outline"></ion-icon>
+              <ion-label>
+                View PDF
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+
+        <ion-list lines="none">
+          <ion-list-header>
+            Preferences
+          </ion-list-header>
+          <ion-menu-toggle autoHide="false">
+            <ion-item button (click)="openConfiguration()" routerLinkActive="selected" routerDirection="root" detail="false">
+              <ion-icon slot="start" name="settings-outline"></ion-icon>
+              <ion-label>Settings</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-item>
+            <ion-icon slot="start" name="moon-outline"></ion-icon>
+            <ion-label>
+              Dark Mode
+            </ion-label>
+            <ion-toggle [(ngModel)]="dark"></ion-toggle>
+          </ion-item>
+
+          <ion-item button (click)="logout()">
+            <ion-icon slot="start" name="log-out-outline"></ion-icon>
+            <ion-label>
+              Logout
+            </ion-label>
+          </ion-item>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  </ion-split-pane>
+
+</ion-app>

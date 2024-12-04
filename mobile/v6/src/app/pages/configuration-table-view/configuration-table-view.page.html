@@ -1,0 +1,334 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>View Table</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col size="3">    
+        <ion-content>
+          <ion-list>
+            <div *ngFor="let item of table; let i=index" >
+              <ion-button ion-item (click)="setCurrentTable(item)" *ngIf="item.ysnVisible === 'true'" >
+                  {{ item.strDisplayName }}  ({{item.intTotal}})
+              </ion-button>                                                 
+            </div>
+          </ion-list>          
+        </ion-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content> -->
+
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col>
+        <!-- <ion-content> -->
+          <ion-grid>
+            <ion-row>
+              <ion-col size="4.5">    
+                <!-- <ion-content> -->
+                  <ion-list>
+                    <div *ngFor="let item of table; let i=index" >
+                      <ion-button ion-item (click)="setCurrentTable(item)" >
+                          {{ item.strDisplayName }}  ({{item.intTotal}})
+                      </ion-button>                                                 
+                    </div>
+                  </ion-list>          
+                <!-- </ion-content> -->
+              </ion-col>
+              <ion-col size="7.5">
+  
+                <ion-content scrollX="true" [ngStyle]="{'height':dynamicScrollHeight}">
+                  <!-- [ngStyle]="{'height':dynamicScrollHeight}" -->
+                  <!-- <ion-scroll scrollX="true" > -->
+                    <!-- [ngStyle]="{'width':dynamicScrollWidth}"  -->
+                    <ion-list [ngStyle]="{'width':dynamicScrollWidth}">
+                      <ion-item *ngFor="let item of data; let i=index" >
+                        <!-- <ion-row *ngFor="let item of data; let i=index" style="height: 30px !important;" > -->
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.a}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.b}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.c}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.d}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.e}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.f}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.g}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.h}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.i}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.j}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.k}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.l}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.m}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.n}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.o}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.p}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.q}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.r}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.s}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.t}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.u}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.v}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.w}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.x}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.y}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.z}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.aa}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ab}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ac}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ad}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ae}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.af}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ag}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ah}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ai}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.aj}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ak}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.al}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.am}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.an}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ao}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ap}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.aq}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ar}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.as}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.at}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.au}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.av}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.aw}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ax}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.ay}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col>
+                            <ion-item style="width: 300px !important;">
+                              <ion-label>{{item.az}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                        <!-- </ion-row> -->
+                      </ion-item>
+                    </ion-list>
+                  <!-- </ion-scroll> -->
+
+                  <!-- <ion-infinite-scroll (ionInfinite)="loadData($event)">
+                    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading data...">                        
+                    </ion-infinite-scroll-content>
+                  </ion-infinite-scroll> -->
+
+                </ion-content>
+
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        <!-- </ion-content>  -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

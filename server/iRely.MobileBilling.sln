@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRely.MobileBilling.WebApi", "iRely.MobileBilling.WebAPI\iRely.MobileBilling.WebApi.csproj", "{2F972D6A-347D-4F1E-852C-1EC43C258443}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRely.MobileBilling.Model", "iRely.MobileBilling.Model\iRely.MobileBilling.Model.csproj", "{86FAAC34-BB3D-466A-826C-D74F29B1C394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRely.MobileBilling.BusinessLayer", "iRely.MobileBilling.BRL\iRely.MobileBilling.BusinessLayer.csproj", "{23AAF330-94B7-4B42-A616-5F1D2D473548}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F972D6A-347D-4F1E-852C-1EC43C258443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F972D6A-347D-4F1E-852C-1EC43C258443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F972D6A-347D-4F1E-852C-1EC43C258443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F972D6A-347D-4F1E-852C-1EC43C258443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86FAAC34-BB3D-466A-826C-D74F29B1C394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86FAAC34-BB3D-466A-826C-D74F29B1C394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86FAAC34-BB3D-466A-826C-D74F29B1C394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86FAAC34-BB3D-466A-826C-D74F29B1C394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23AAF330-94B7-4B42-A616-5F1D2D473548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23AAF330-94B7-4B42-A616-5F1D2D473548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23AAF330-94B7-4B42-A616-5F1D2D473548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23AAF330-94B7-4B42-A616-5F1D2D473548}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

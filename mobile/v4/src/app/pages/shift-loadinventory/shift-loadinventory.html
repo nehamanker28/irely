@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar color="white" class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-3 start style="margin-right: 5px;">
+          <button start ion-button block primary large (click)="removeSelection()" class="button-global">Remove Selection</button>
+        </ion-col>
+        <ion-col col-2 start>
+          <button start ion-button block primary large (click)="openAddItem()" class="button-global">Add Item</button>
+        </ion-col>
+        <ion-col col-4.5></ion-col>
+        <!-- <ion-col col-2 end style="margin-right: 5px;">
+          <button end ion-button block primary large (click)="cancel()" class="button-global">Cancel</button>
+        </ion-col> -->
+        <ion-col col-2 end>
+          <button end ion-button block primary large (click)="done()" class="button-global">Done</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>       
+  <ion-label style="padding-left: 15px; padding-top: 5px; font-size: large;"><b>Location:</b> {{strLocation}}</ion-label>
+  <ion-list>
+    <ion-grid padding>
+      <ion-row justify-content-start>
+        <ion-col col-2>
+          <ion-item>
+            <b>Item #</b>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2.5>
+          <ion-item>
+            <b>Description</b>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.7>
+          <ion-item>
+          <b>Before Loading</b>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.5>
+          <ion-item>
+            <b>Loaded</b>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.5>
+          <ion-item>
+            <b>Returned</b>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.5>
+          <ion-item>
+            <b>After Loading</b>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.3>
+          <ion-item>
+            <b>Ending %</b>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let item of data">
+        <ion-col col-2>
+          <ion-item>
+            <ion-checkbox color="primary" [(ngModel)]="item['ysnSelected']" (click)="selectItem(item)"></ion-checkbox>
+            <ion-label>&nbsp;&nbsp; {{item.strItemNumber}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2.5>
+          <ion-item>
+            <ion-label>{{item.strItemDescription}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.7>
+          <ion-item>
+            <ion-input type="number" class="input-border-styles" [(ngModel)]="item['dblQuantityBefore']" (ionChange)="calculate(item)" (ionFocus)="clearInputValue($event)"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.5>
+          <ion-item>
+            <ion-input type="number" class="input-border-styles" [(ngModel)]="item['dblQuantityLoaded']" (ionChange)="calculate(item)" (ionFocus)="clearInputValue($event)"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.5>
+          <ion-item>
+            <ion-input type="number" class="input-border-styles" [(ngModel)]="item['dblQuantityReturned']" (ionChange)="calculate(item)" (ionFocus)="clearInputValue($event)"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.5>
+          <ion-item>
+            <ion-label>{{item.dblQuantityAfter}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1.3>
+          <ion-item>
+            <ion-input type="number" class="input-border-styles" *ngIf="item._showEnding" [(ngModel)]="item['dblEnding']" (ionChange)="calculate(item)" (ionFocus)="clearInputValue($event)"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

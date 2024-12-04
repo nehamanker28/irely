@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <script>
+        $(document).ready(function () {
+
+            var addCustomButtons = function () {
+                var buttonGroup = document.getElementsByClassName('dxr-groupList');
+                var node = document.createElement("li");
+
+                node.id = "btnClosePeriod";
+                node.className = 'dxr-group';
+                node.style['paddingRight'] = '5px';
+                node.innerHTML = '	<div class=\"dxr-groupContent\">		<div class=\"dxr-block dxr-blLrgItems\">				 <a href=\"return false;\" id=\"Ribbon_T0G7I2\" title=\"Close Fiscal Period.\" class=\"\"><img id=\"Ribbon_T0G7I2_LI\" class=\"dxWeb_xrdvRibbonIcon_BtnCloseLarge_DevEx dxr-img32\" src=\"Content/Images/ToolbarEnabled/post.png\" alt=\"\"><img id=\"Ribbon_T0G7I2_RI\" class=\"dxWeb_xrdvRibbonIcon_BtnClose_DevEx dxr-img16 dx-vam\" src=\"Content/Images/ToolbarEnabled/post.png\" alt=\"\"><br><span class=\"dxr-label\"><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\">Close Period</span></span></span></a> <b class=\"dx-clear\"></b></div><b class=\"dx-clear\"></b>		</div>		<b class=\"dx-clear\"></b>		<div id=\"reportViewer_Splitter_RibbonToolbar_T2G7_EBTN\" class=\"dxr-grExpBtn\" style=\"width: 48px;\">		<img id=\"reportViewer_Splitter_RibbonToolbar_T2G7_EBTNI\" class=\"dxr-img32\" src=\"\" alt=\"\"><br><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\"></span><br><span class=\"dxr-popOut\"><img class=\"dxWeb_rPopOut_DevEx dx-vam\" src=\"\" alt=\"po\"></span></span>	</div> ';
+
+                buttonGroup[0].insertBefore(node, buttonGroup[0].childNodes[buttonGroup[0].childNodes.length - 2]);
+                
+                node = document.createElement("li");
+                node.id = "btnArchive";
+                node.className = 'dxr-group';
+                node.style['paddingRight'] = '5px';
+                node.innerHTML = '	<div class=\"dxr-groupContent\">		<div class=\"dxr-block dxr-blLrgItems\">				 <a href=\"return false;\" id=\"Ribbon_T0G7I1\" title=\"Archive document.\" class=\"\"><img id=\"Ribbon_T0G7I1_LI\" class=\"dxWeb_xrdvRibbonIcon_BtnCloseLarge_DevEx dxr-img32\" src=\"Content/Images/ToolbarEnabled/archive.png\" alt=\"\"><img id=\"Ribbon_T0G7I1_RI\" class=\"dxWeb_xrdvRibbonIcon_BtnClose_DevEx dxr-img16 dx-vam\" src=\"Content/Images/ToolbarEnabled/archive.png\" alt=\"\"><br><span class=\"dxr-label\"><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\">Archive</span></span></span></a> <b class=\"dx-clear\"></b></div><b class=\"dx-clear\"></b>		</div>		<b class=\"dx-clear\"></b>		<div id=\"reportViewer_Splitter_RibbonToolbar_T1G7_EBTN\" class=\"dxr-grExpBtn\" style=\"width: 48px;\">		<img id=\"reportViewer_Splitter_RibbonToolbar_T1G7_EBTNI\" class=\"dxr-img32\" src=\"\" alt=\"\"><br><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\"></span><br><span class=\"dxr-popOut\"><img class=\"dxWeb_rPopOut_DevEx dx-vam\" src=\"\" alt=\"po\"></span></span>	</div> ';
+
+                buttonGroup[0].insertBefore(node, buttonGroup[0].childNodes[buttonGroup[0].childNodes.length - 2]);
+
+                node = document.createElement("li");
+                node.id = "btnReCalculate";
+                node.className = 'dxr-group';
+                node.style['paddingRight'] = '5px';
+                node.style['display'] = 'none';
+                node.innerHTML = '	<div class=\"dxr-groupContent\">		<div class=\"dxr-block dxr-blLrgItems\">				 <a href=\"return false;\" id=\"Ribbon_T0G7I4\" title=\"Changes.\" class=\"\"><img id=\"Ribbon_T0G7I4_LI\" class=\"dxWeb_xrdvRibbonIcon_BtnCloseLarge_DevEx dxr-img32\" src=\"Content/Images/ToolbarEnabled/calculate-amount.png\" alt=\"\"><img id=\"Ribbon_T0G7I4_RI\" class=\"dxWeb_xrdvRibbonIcon_BtnClose_DevEx dxr-img16 dx-vam\" src=\"Content/Images/ToolbarEnabled/calculate-amount.png\" alt=\"\"><br><span class=\"dxr-label\"><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\">Changes</span></span></span></a> <b class=\"dx-clear\"></b></div><b class=\"dx-clear\"></b>		</div>		<b class=\"dx-clear\"></b>		<div id=\"reportViewer_Splitter_RibbonToolbar_T0G7_EBTN\" class=\"dxr-grExpBtn\" style=\"width: 48px;\">		<img id=\"reportViewer_Splitter_RibbonToolbar_T0G7_EBTNI\" class=\"dxr-img32\" src=\"\" alt=\"\"><br><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\">Changes</span><br><span class=\"dxr-popOut\"><img class=\"dxWeb_rPopOut_DevEx dx-vam\" src=\"\" alt=\"po\"></span></span>	</div> ';
+
+                buttonGroup[0].insertBefore(node, buttonGroup[0].childNodes[buttonGroup[0].childNodes.length - 2]);
+
+                node = document.createElement("li");
+                node.id = "btnComments";
+                node.className = 'dxr-group';
+                node.style['paddingRight'] = '5px';
+                node.style['display'] = 'none';
+                node.innerHTML = '	<div class=\"dxr-groupContent\">		<div class=\"dxr-block dxr-blLrgItems\">				 <a href=\"javascript:parent.iRely.Functions.openScreen(\'FinancialReportDesigner.view.ReportComments\', { ReportId: parent.Ext.WindowManager.getActive().reportId });;\" id=\"Ribbon_T0G7I3\" title=\"Add/Show comments.\" class=\"\"><img id=\"Ribbon_T0G7I3_LI\" class=\"dxWeb_xrdvRibbonIcon_BtnCloseLarge_DevEx dxr-img32\" src=\"Content/Images/ToolbarEnabled/work-order-add.png\" alt=\"\"><img id=\"Ribbon_T0G7I3_RI\" class=\"dxWeb_xrdvRibbonIcon_BtnClose_DevEx dxr-img16 dx-vam\" src=\"Content/Images/ToolbarEnabled/work-order-add.png\" alt=\"\"><br><span class=\"dxr-label\"><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\">Comments</span></span></span></a> <b class=\"dx-clear\"></b></div><b class=\"dx-clear\"></b>		</div>		<b class=\"dx-clear\"></b>		<div id=\"reportViewer_Splitter_RibbonToolbar_T0G7_EBTN\" class=\"dxr-grExpBtn\" style=\"width: 48px;\">		<img id=\"reportViewer_Splitter_RibbonToolbar_T0G7_EBTNI\" class=\"dxr-img32\" src=\"\" alt=\"\"><br><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\">Comments</span><br><span class=\"dxr-popOut\"><img class=\"dxWeb_rPopOut_DevEx dx-vam\" src=\"\" alt=\"po\"></span></span>	</div> ';
+
+                buttonGroup[0].insertBefore(node, buttonGroup[0].childNodes[buttonGroup[0].childNodes.length - 2]);
+
+                node = document.createElement("li");
+                node.id = "btnCloseWindow";
+                node.className = 'dxr-group';
+                node.style['paddingRight'] = '5px';
+                node.innerHTML = '	<div class=\"dxr-groupContent\">		<div class=\"dxr-block dxr-blLrgItems\">				 <a href=\"javascript:parent.Ext.WindowManager.getActive().close();\" id=\"Ribbon_T0G7I0\" title=\"Close document.\" class=\"\"><img id=\"Ribbon_T0G7I0_LI\" class=\"dxWeb_xrdvRibbonIcon_BtnCloseLarge_DevEx dxr-img32\" src=\"Content/Images/ToolbarEnabled/close-only.png\" alt=\"\"><img id=\"Ribbon_T0G7I0_RI\" class=\"dxWeb_xrdvRibbonIcon_BtnClose_DevEx dxr-img16 dx-vam\" src=\"Content/Images/ToolbarEnabled/close-only.png\" alt=\"\"><br><span class=\"dxr-label\"><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\">Close</span></span></span></a> <b class=\"dx-clear\"></b></div><b class=\"dx-clear\"></b>		</div>		<b class=\"dx-clear\"></b>		<div id=\"reportViewer_Splitter_RibbonToolbar_T0G7_EBTN\" class=\"dxr-grExpBtn\" style=\"width: 48px;\">		<img id=\"reportViewer_Splitter_RibbonToolbar_T0G7_EBTNI\" class=\"dxr-img32\" src=\"\" alt=\"\"><br><span class=\"dxr-lblContent\"><span class=\"dxr-lblText\"></span><br><span class=\"dxr-popOut\"><img class=\"dxWeb_rPopOut_DevEx dx-vam\" src=\"\" alt=\"po\"></span></span>	</div> ';
+
+                buttonGroup[0].insertBefore(node, buttonGroup[0].childNodes[buttonGroup[0].childNodes.length - 2]);
+            }
+
+            setTimeout(addCustomButtons, 100);
+        });
+	</script>
+
+</head>
+<body>    
+    @RenderBody()
+</body>
+</html>

@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar box-shadow" >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col size="2.5" start style="margin-right: 5px;">
+          <ion-button start ion-button expand="block" primary size="large"(click)="removeSelection()" class="button-global">Remove Item</ion-button>
+        </ion-col>
+        <ion-col size="2.5" start>
+          <ion-button start ion-button expand="block" primary size="large"(click)="openAddItem()" class="button-global">Add Item</ion-button>
+        </ion-col>
+        <ion-col size="1.5"></ion-col>
+        <ion-col size="2.5" end>
+          <ion-button end ion-button expand="block" primary size= "large"(click)="done('printBol')" class="button-global" >Print BOL</ion-button>
+        </ion-col>
+        <ion-col size="2.5" end>
+          <ion-button end ion-button expand="block" primary size="large"(click)="done('done')" class="button-global" >Done</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding scrollX="true">       
+  <br>
+  <ion-label style="padding-left: 15px; padding-top: 5px; font-size: large;"><b>Location:</b> {{strLocation}}</ion-label>
+  <ion-list [ngStyle]="{'width':dynamicScrollWidth}" >
+    <ion-grid >
+      <ion-row>
+        <ion-col size="1.5">
+          <ion-item>
+            <b>Item #</b>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-item>
+            <b>Description</b>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1">
+          <ion-item>
+          <b>Before Loading</b>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1.2">
+          <ion-item>
+            <b>Loaded</b>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1.2">
+          <ion-item>
+            <b>Returned</b>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1.2">
+          <ion-item>
+            <b>After Loading</b>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1.3">
+          <ion-item>
+            <b>Ending %</b>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-item>
+            <b>Location</b>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let item of data; let i=index">
+        <ion-col size="1.5">
+          <ion-item>
+            <ion-checkbox style="margin: 0px !important;" color="primary" [(ngModel)]="item['ysnSelected']" (click)="selectItem(item)"></ion-checkbox>
+            <ion-label style="padding-left: 5px;">{{item.strItemNumber}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="2">
+          <ion-item>
+            <ion-label>{{item.strItemDescription}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1">
+          <ion-item>
+            <ion-input type="number" class="input-border-styles" [(ngModel)]="item['dblQuantityBefore']" (ionChange)="calculate(item)" (ionFocus)="clearInputValue($event)"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1.2">
+          <ion-item>
+            <ion-input type="number" class="input-border-styles" [(ngModel)]="item['dblQuantityLoaded']" (ionChange)="calculate(item)" (ionFocus)="clearInputValue($event)"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1.2">
+          <ion-item>
+            <ion-input type="number" class="input-border-styles" [(ngModel)]="item['dblQuantityReturned']" (ionChange)="calculate(item)" (ionFocus)="clearInputValue($event)"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1.2">
+          <ion-item>
+            <ion-label>{{item.dblQuantityAfter}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="1.3">
+          <ion-item>
+            <ion-label>{{item.dblEnding}}</ion-label>
+            <!-- <ion-input type="number" class="input-border-styles" *ngIf="item._showEnding" [(ngModel)]="item['dblEnding']" (ionChange)="calculate(item)" (ionFocus)="clearInputValue($event)"></ion-input> -->
+          </ion-item>
+        </ion-col>
+          <ion-col size="2">
+          <ion-item>
+            <ion-label>{{item.strLocation}}</ion-label>
+            <!-- <ion-input type="number" class="input-border-styles" *ngIf="item._showEnding" [(ngModel)]="item['dblEnding']" (ionChange)="calculate(item)" (ionFocus)="clearInputValue($event)"></ion-input> -->
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</ion-content>

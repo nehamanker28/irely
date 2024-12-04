@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar box-shadow" >
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col size="8" style="margin-right: 5px;">
+          <ion-searchbar #txtSearch  [(ngModel)]="searchValue" large (ionChange)="loadTaxQuery()" [debounce]="2000"></ion-searchbar>
+        </ion-col>
+        <ion-col col-auto></ion-col>
+        <ion-col size="3.5">
+          <ion-button ion-button expand="block" size="large"primary (click)="addTaxCode()" class="button-global"> Ok </ion-button>          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>  
+</ion-header>
+  
+<ion-content padding>
+  <ion-grid>
+    <!-- <ion-item> -->
+      <ion-row>
+        <ion-col size="3">
+          Tax Group    
+        </ion-col>
+        <ion-col size="3">
+          Tax Code    
+        </ion-col>
+        <ion-col size="3">
+          Calculation Method
+        </ion-col>
+        <ion-col size="3">
+          Rate
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let tax of data; let i=index" radio-group>
+        <ion-col size="3">
+          <ion-item>
+            <ion-checkbox color="primary" [(ngModel)]="tax['ysnSelected']" (click)="selectTax(tax)"></ion-checkbox>
+            <ion-label style="padding-left: 5px;">{{tax.strTaxGroup}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3">
+          <ion-item>
+            <ion-label style="padding-left: 5px;">{{tax.strTaxCode}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3">
+          <ion-item>
+            <ion-label>{{tax.strCalculationMethod}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3">
+          <ion-item>
+            <ion-label>{{tax.dblRate}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    <!-- </ion-item> -->
+  </ion-grid>
+</ion-content>

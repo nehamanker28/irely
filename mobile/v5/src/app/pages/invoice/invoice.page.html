@@ -1,0 +1,235 @@
+<ion-header>
+  <ion-toolbar class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col size="2" start style="margin-right: 1px;">
+          <ion-button ion-button expand="block" size="large" primary (click)="removeselectionInvoice()" class="button-global">- Selection</ion-button>
+        </ion-col>
+        <ion-col size="2" start style="margin-right: 1px;">
+          <ion-button ion-button expand="block" size="large" primary (click)="openAddMenu()" class="button-global">+ Add</ion-button>
+        </ion-col>
+        <ion-col size="2" start>
+          <ion-button ion-button expand="block" size="large" primary (click)="openMiscMenu()" class="button-global">More</ion-button>
+        </ion-col>
+        <ion-col size="1.5"></ion-col>
+        <ion-col size="2" end style="margin-right: 1px;">
+          <ion-button ion-button expand="block" size="large" primary (click)="cancelInvoice()" class="button-global">Cancel</ion-button>
+        </ion-col>
+        <ion-col size="2" end>
+          <ion-button ion-button expand="block" size="large" primary (click)="doneInvoice()" class="button-global">Done</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-image: none !important">
+  <!-- <ion-list> -->
+    <ion-grid no-padding>    
+      <ion-row>
+        <ion-col size="9">
+          <ion-grid no-padding id='gridInvoice'> 
+            <ion-row>
+              <ion-col size="3">
+                <ion-item>
+                  <ion-label><b>{{customer['strCustomerNumber']}}</b></ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="3">
+                <ion-item>
+                  <ion-label><b>{{customer['strCustomerName']}}</b></ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="3">
+                <ion-item>
+                  <ion-label>{{customer['strInternalNotes']}}</ion-label>
+                </ion-item>
+              </ion-col>
+              <ion-col size="3" style="border-color: #f1f1f1; border-style: solid; border-width: thin; background-color: #f1f1f1; color: black !important; border-radius: 4px; margin-top: 4px;">
+                <!-- <ion-label style="margin-left: 10px;">Type:</ion-label> -->
+                <div class="select">
+                  <ion-select #type clearInput interface="popover" placeholder="Type" [(ngModel)]="customer['strInvoiceType']"> 
+                    <ion-select-option>Invoice</ion-select-option>
+                    <ion-select-option>Cash</ion-select-option>
+                  </ion-select>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngFor="let order of invoice; let i=index" name='order_items' (click)="selectOrderStyle(order)" id="invoice_order_div_{{order.intOrderItemMobileId}}">
+              <ion-list style="width: 100%">
+                <ion-grid>
+                  <ion-row *ngIf="order.intSiteId != null || order.intSiteID != null">
+                    <ion-col size="5">
+                      <ion-item style="background-color:#f1f1f1; ">
+                        <ion-checkbox color="primary" style="margin: 0px !important;" [(ngModel)]="order['ysnSelected']" (click)="selectOrderStyle(order)"></ion-checkbox>
+                        <ion-label style="padding-left: 5px;"><b>{{order.strSiteDescription}}</b></ion-label>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col size="2.5">
+                      <ion-item>
+                        <ion-label><b>Serial: {{order.strSerialNumber}}</b></ion-label>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col size="2">
+                      <ion-item>
+                        <ion-label><b>Size: {{order.dblTankCapacity}}</b></ion-label>
+                      </ion-item>
+                    </ion-col>
+                    <ion-col size="2.5">
+                      <ion-item style="background-color:#f1f1f1">
+                        <ion-checkbox color="danger" style="margin: 0px !important;" [(ngModel)]="order['ysnOutOfGas']"></ion-checkbox>
+                        <ion-label style="padding-left: 5px;">Out of Gas</ion-label>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row *ngFor="let item of order['tblOrderItem']; let x=index" >
+                    <ion-list style="width: 100%">
+                      <ion-grid>
+                        <ion-row>
+                          <ion-col size="0.5">
+                          </ion-col>
+                          <ion-col size="5" align-items-start>
+                            <ion-item style="background-color:#f1f1f1">
+                              <ion-checkbox color="primary" style="margin: 0px !important;" [(ngModel)]="item['ysnSelected']" (click)="selectOrderStyle(order)"></ion-checkbox>
+                              <ion-label style="padding-left: 5px;">{{item.strItemNo}} {{item.strItemDescription}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col size="2">
+                            <ion-item style="background-color:#f1f1f1">
+                              <ion-label>$</ion-label><ion-input type="number" [(ngModel)]="item['price']" (ionFocus)="clearInputValue($event)" (ionChange)="updateMeter(item)"></ion-input>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col size="1.5">
+                            <ion-item style="background-color:#f1f1f1">
+                              <ion-input type="number" [(ngModel)]="item['quantity']" (ionFocus)="clearInputValue($event)" (ionChange)="updateMeter(item)" ></ion-input>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col size="1.5">
+                            <ion-item style="background-color:#f1f1f1">
+                              <ion-input type="number" [(ngModel)]="item['ending']" (ionChange)="updateMeter(item)"></ion-input><ion-label>%</ion-label>
+                            </ion-item>
+                          </ion-col>
+                          <ion-col size="1.5">
+                            <ion-item>
+                              <ion-label>{{(item.totalamount || 0.00).toFixed(2)}}</ion-label>
+                            </ion-item>
+                          </ion-col>
+                        </ion-row>
+
+                        <!-- <ion-row *ngFor="let tax of item['tblOrderTaxCode']; let z=index">
+                          <ion-list style="width: 100%" *ngIf="tax['ysnTaxExempt'] !== 'true'">
+                            <ion-grid no-padding>
+                              <ion-row>
+                                <ion-col size="2">
+                                </ion-col>
+                                <ion-col size="5" align-items-start>
+                                  <ion-item style="background-color:#f1f1f1">
+                                    <ion-checkbox color="primary" [(ngModel)]="tax['ysnSelected']" (click)="selectOrderStyle(order)"></ion-checkbox>
+                                    <ion-label>{{tax.strTaxCode}}</ion-label>
+                                  </ion-item>
+                                </ion-col>
+                                <ion-col size="2">
+                                  <ion-item>
+                                    <ion-label *ngIf="tax.strCalculationMethod === 'Unit'">${{tax.dblRate}}</ion-label>
+                                    <ion-label *ngIf="tax.strCalculationMethod === 'Percentage'">{{tax.dblRate}}%</ion-label>
+                                  </ion-item>
+                                </ion-col>
+                                <ion-col size="1">
+                                  <ion-item>
+                                  </ion-item>
+                                </ion-col>
+                                <ion-col size="2">
+                                  <ion-item>
+                                    <ion-label>${{tax.dblTotalTax}}</ion-label>
+                                  </ion-item>
+                                </ion-col>
+                              </ion-row>
+                            </ion-grid>
+                          </ion-list>
+                        </ion-row> -->
+
+                      </ion-grid>
+                    </ion-list>
+                    <ion-list style="width: 100%">
+                      <ion-grid>
+                        <ion-row>
+                          <ion-col size="2"></ion-col>
+                          <ion-col size="3">
+                            <ion-button (click)="openItemTaxes(item)" expand="block" fill="outline">Tax Applied: ${{(item.itemtotaltax || 0.00).toFixed(2)}}</ion-button>
+                          </ion-col>
+                          <ion-col>
+                          </ion-col>
+                        </ion-row>
+                      </ion-grid>
+                    </ion-list>
+                  </ion-row> 
+                  
+                </ion-grid>
+              </ion-list>
+            </ion-row>
+          </ion-grid>
+          
+        </ion-col>
+        <ion-col size="3">
+          
+          <ion-item style="align-self: start;">
+            <ion-grid>
+              <ion-row>
+                <!-- <ion-col><b>Meter: {{meter_name}}</b></ion-col> -->
+                <ion-col size="12" style="border-color: #f1f1f1; border-style: solid; border-width: thin; background-color: #f1f1f1; color: black !important; border-radius: 4px; margin-top: 4px;">
+                  <div class="select" style="width: 100%;">
+                    <ion-select style="min-width: 150px;" (ionChange)="selectMeter()" #meter clearInput interface="popover" placeholder="Choose Meter" [(ngModel)]="intMeterNode"> 
+                      <ion-select-option value="1">Meter #1</ion-select-option>
+                      <ion-select-option value="2">Meter #2</ion-select-option>
+                    </ion-select>
+                  </div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col style="color:green">{{meter_name}}</ion-col>
+              </ion-row>
+              <ion-row style="margin-top: 10px;">
+                <ion-col>Status:</ion-col>
+                <ion-col style="color:green" *ngIf="meter_status=='Connected'" (click)="connect_LCR()">{{meter_status}}</ion-col>
+                <ion-col style="color:red" *ngIf="meter_status!='Connected'" (click)="connect_LCR()">{{meter_status}}</ion-col>
+              </ion-row>
+              <ion-row style="margin-top: 10px;">
+                <ion-col>Quantity:</ion-col>
+                <ion-col>{{meter_quantity}}</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-label style="margin-top: 10px;">Preset: </ion-label>
+                </ion-col>
+                <ion-col>
+                  <ion-input type="number" style="left: -8px;" [(ngModel)]="meter_preset" (ionFocus)="clearInputValue($event)"></ion-input>
+                </ion-col>
+              </ion-row>             
+              <!-- <ion-row>
+                <ion-col>Ending %:</ion-col>
+                <ion-col>{{meter_ending}}</ion-col>
+              </ion-row> -->
+              <ion-row>
+                <ion-col>
+                    <ion-button ion-button fill="outline" primary expand="block" [disabled]="meter_process == 'PLEASE WAIT..'" (click)="startPumping()">{{meter_process}}</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+
+        </ion-col>
+      </ion-row>    
+    </ion-grid>
+  <!-- </ion-list> -->
+</ion-content>
+<ion-footer padding>
+  <ion-row style="height: 55px;">
+    <ion-col size="7"></ion-col>
+    <ion-col size="2" end>
+      <ion-button (click)="addSignature()" expand="block" fill="outline">Add Signature</ion-button> &nbsp;&nbsp;
+    </ion-col>
+    <ion-col size="3">
+      <h3 style="text-align: left; margin-top: 12px;">Grand Total: ${{(grandTotal || 0.00).toFixed(2)}}</h3>
+    </ion-col>
+  </ion-row>    
+</ion-footer>

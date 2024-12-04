@@ -1,0 +1,18 @@
+page-shift-loadinventory {
+    .col {
+        justify-content: start;
+        padding-left: 1px;
+        color: black;
+        overflow: auto;
+    }
+    .label {
+        text-align: -webkit-auto;
+        color: black !important;
+    }
+    .input-border-styles {
+        border-bottom-color: #7a7878;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        color: black !important;
+    }
+}

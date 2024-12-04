@@ -1,0 +1,28 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { IonicModule } from '@ionic/angular';
+
+import { LineFlushTransferPageRoutingModule } from './line-flush-transfer-routing.module';
+
+import { LineFlushTransferPage } from './line-flush-transfer.page';
+import { CommonSQL } from '../../framework/_common/sqlite/implementation/common-sql';
+import { GlobalInfoBRL } from '../../framework/brl/implementation/globalinfo';
+import { Message } from '../../framework/_common/base/message';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    LineFlushTransferPageRoutingModule
+  ],
+  declarations: [LineFlushTransferPage],
+  providers: [
+    Message,
+    CommonSQL,
+    GlobalInfoBRL
+  ]
+})
+export class LineFlushTransferPageModule {}

@@ -1,0 +1,77 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-base64-to-gallery": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-advanced-http": {
+      "ANDROIDBLACKLISTSECURESOCKETPROTOCOLS": "SSLv3,TLSv1",
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-bluetooth-serial": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-file-opener2": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-printer": {
+      "ANDROID_SUPPORT_V4_VERSION": "28.+",
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-request-location-accuracy": {
+      "PLAY_SERVICES_LOCATION_VERSION": "16.+",
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-plugin-zip": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    },
+    "uk.co.workingedge.cordova.plugin.sqliteporter": {
+      "PACKAGE_NAME": "com.irely.mobilebilling"
+    }
+  },
+  "dependent_plugins": {}
+}

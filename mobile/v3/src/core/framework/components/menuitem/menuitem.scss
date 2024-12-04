@@ -1,0 +1,51 @@
+menuitem {
+  $primary: color($colors, primary);
+
+  .menu-label {
+    background-color: $primary;
+    border-color: whitesmoke;
+    border-style: solid;
+    border-width: thin;
+    color: whitesmoke;
+    font-size: larger;
+    font-weight: bold;
+  }
+  
+  ion-grid {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;  
+  }
+
+  ion-grid ion-row {
+    flex: 1;
+    display: flex;
+  }
+  ion-row ion-col {
+    flex: 1;
+    flex-grow: 1;
+    color: #fff;
+    
+    /* Flex for these containers (cells) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  ion-grid ion-icon {
+    font-size: 60px;
+  }
+  .ion-icon-menu {
+    font-size: 4.4em !important;
+  }
+
+  // ion-grid ion-icon {
+  //   font-size: 65px;
+  // }
+  // ion-icon {
+  //   display: inline-block;
+  //   font-size: 4.4em !important;
+  // }
+
+}

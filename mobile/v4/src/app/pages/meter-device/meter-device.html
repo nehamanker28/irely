@@ -1,0 +1,51 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>meter-device</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content padding>  
+  <ion-list padding>
+    <button ion-button block (click)="scanDevices()">SCAN</button>
+    <ion-list-header>
+      Paired Devices
+    </ion-list-header>
+    <ion-grid no-padding>    
+      <ion-row justify-content-start *ngFor="let device of pairedDevices; let i=index">   
+        <ion-col col-2>
+          <button ion-button block (click)="disconnectDevice(device)" *ngIf="device.ysnConnected === 'true'">Disconnect</button>  
+          <button ion-button block (click)="connectDevice(device)" *ngIf="device.ysnConnected != 'true'">Connect</button>  
+        </ion-col>
+        <ion-col col-3 text-left>
+          <label style="color: black; text-align: left;" text-left>{{device.name}}</label>
+        </ion-col>
+        <ion-col></ion-col> 
+      </ion-row>
+    </ion-grid>
+    <ion-list-header>
+      Availlable Devices
+    </ion-list-header>
+    <ion-item *ngFor='let device of unpairedDevices' (click)="connectDevice(device)">
+      <span>
+        {{device.name}}
+      </span>
+    </ion-item>
+
+    <button ion-button block (click)="getMeterData()">Test Meter Value</button>
+    <button ion-button block (click)="stopMeterData()">STOP</button>    
+    <ion-item *ngFor='let item of resultMeterValue'>
+      <span>
+        {{item}}
+      </span>
+    </ion-item>
+    <button ion-button block (click)="getMeterStatus()">Test Meter Status</button>
+    <ion-item *ngFor='let item of resultMeterStatus'>
+      <span>
+        {{item}}
+      </span>
+    </ion-item>
+
+    <ion-spinner name="crescent" *ngIf="gettingDevices"></ion-spinner>
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,36 @@
+div[scrollX=true] {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+       display: none;
+    }
+     .scroll-item {
+       flex: 0 0 auto;
+    }
+  }
+
+  .fuelnotenough {
+    background-color: rgb(255 252 0 / 20%);
+  }  
+
+
+  $categories: (
+   generated: var(--ion-color-primary),
+   dispatched: var(--ion-color-primary),
+   delivered: #69bb7b,
+   fuelnotenough: red,
+//   food: #3bc7c4,
+//   documentation: #b16be3,
+//   navigation: #6600cc
+);
+
+@each $track, $value in map-remove($categories) {
+   ion-item-sliding[track='#{$track}'] ion-label {
+     border-left: 2px solid $value;
+     padding-left: 10px;
+   }
+   ion-item-sliding[track='fuelnotenough'] ion-label {
+    background-color: #fffd002b;
+  }
+ }

@@ -1,0 +1,49 @@
+<ion-content class="outer-content">
+  <div class="login-container">
+    <div padding class="image-div">
+      <img src="assets/irely/irely.png"/>      
+    </div>
+
+    <form (ngSubmit)="doSignIn(loginForm.value, loginForm.valid)" [formGroup]="loginForm">
+      <ion-list>     
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input tappable autocapitalize='off' color="light" formControlName="username" clearInput>
+          </ion-input>
+        </ion-item>
+        <ion-item *ngIf="!loginForm.controls.username.valid && submitAttempt" no-lines>
+          <p class="validationmessage">This field is required.</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input tappable type="password" color="light" formControlName="password" clearInput>
+          </ion-input>
+        </ion-item>
+        <ion-item *ngIf="!loginForm.controls.password.valid && submitAttempt" no-lines>
+          <p class="validationmessage">This field is required.</p>
+        </ion-item>
+
+      </ion-list>  
+
+      <div class="submit-box">
+        <button ion-button block type="submit" color="blue">Sign In</button>        
+        <button ion-button type="button" block icon-left color="primary" outline (click)="showConnection()" margin-top>
+            <ion-icon name="ios-create"></ion-icon> Server Configuration
+        </button>
+      </div>
+
+      <div class="forgot-login-button">
+        <button ion-button class="clear-button" center color="primary" (click)="showForgotPassword()" type="button" clear>
+          Forgot username / password?
+        </button>
+      </div>
+
+      <div>
+        <label style="color: #919191; font-size: x-small;">Version : {{version}}</label>
+      </div>
+
+    </form>
+  
+  </div>
+</ion-content>

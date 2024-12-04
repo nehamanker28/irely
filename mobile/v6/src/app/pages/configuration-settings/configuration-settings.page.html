@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+    <ion-buttons slot="end" style="padding-right: 15px;">
+      <ion-button ion-button (click)="save(data)" >Save</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header style="font-weight: bolder;">
+      DEFAULTS 
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="person" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">New Customer No</ion-label>
+      <ion-label style="text-align-last: end; font-weight: bolder;">{{companyPref['strDefaultCustomerNo']}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="pin" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">New Site No</ion-label>  
+      <ion-label style="text-align-last: end; font-weight: bolder;">{{companyPref['strDefaultSiteNo']}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="business" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Hazardous Spill Clean-up Company Name</ion-label>  
+      <ion-label style="text-align-last: end; font-weight: bolder;">{{companyPref['strHazardousSpillCompanyName']}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Hazardous Spill Clean-up Company Phone Number</ion-label>  
+      <ion-label style="text-align-last: end; font-weight: bolder;">{{companyPref['strHazardousSpillCompanyPhoneNumber']}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="alert-circle" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Emergency Customer Code</ion-label>  
+      <ion-label style="text-align-last: end; font-weight: bolder;">{{companyPref['strEmergencyCustomerCode']}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header style="font-weight: bolder;">
+     SETUP
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="information-circle-outline" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Current Version</ion-label>  
+      <ion-label style="text-align-last: end; font-weight: bolder;">{{currentVersion}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="wifi" item-start color="primary"></ion-icon>
+      <ion-label style="padding-left: 10px;">Current Connection</ion-label>  
+      <ion-label style="text-align-last: end; font-weight: bolder;">{{currentConnection}}</ion-label>
+    </ion-item>
+    <ion-item [ngClass]="true===LocationStatus?'control-disabled':'control-enabled'">
+      <ion-icon name="location" item-start color="primary"></ion-icon>
+      <ion-label stacked >Location: </ion-label>
+      <ion-select [disabled]="LocationStatus" clearInput interface="popover" [(ngModel)]="currentLocation" > 
+
+      <!-- <ion-select [disabled]="LocationStatus" clearInput interface="popover" [(ngModel)]="currentLocation" [interfaceOptions]="{'cssClass': 'mycomponent-wider-popover'}">  -->
+        <ion-select-option *ngFor="let item of location; let i = index;" [value]="item.intCompanyLocationId" >
+          <span>{{item.strLocationName}}</span>
+        </ion-select-option>
+      </ion-select>
+      <!-- <ion-select [disabled]="LocationStatus" clearInput  [(ngModel)]="currentLocation"> 
+        <ion-select-option *ngFor="let item of location; let i = index;" [value]="item.intCompanyLocationId">
+          <span>{{item.strLocationName}}</span>
+        </ion-select-option>
+      </ion-select> -->
+    </ion-item>
+  </ion-list>  
+</ion-content>

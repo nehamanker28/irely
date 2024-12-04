@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons start>
+      <button ion-button navPop>Cancel</button>
+    </ion-buttons>
+    <ion-title> Connection </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="save(connectionForm.value, connectionForm.valid)" [disabled]="!this.connectionForm.dirty || !this.connectionForm.valid">Save</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <form (ngSubmit)="save(connectionForm.value, connectionForm.valid)" [formGroup]="connectionForm">
+    <div >
+      <p class="connection-label">Enter the i21 link and company <br> you want to connect</p>
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label class="connectionlabel">Link</ion-label>
+        <ion-input type="text" formControlName="strLink" clearInput></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!connectionForm.controls.strLink.valid  && connectionForm.controls.strLink.dirty" no-lines>
+        <p class="validationmessage">Invalid link.</p>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="connectionlabel">Company</ion-label>
+        <ion-select formControlName="strCompany" [disabled]="!connectionForm.controls.strLink.valid" clearInput> 
+          <ion-option *ngFor="let company of companies" [value]="company.strCompany">
+            <span>{{ company.strCompany }}</span>
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="!connectionForm.controls.strCompany.valid  && connectionForm.controls.strCompany.dirty" no-lines>
+        <p class="validationmessage">This field is required.</p>
+      </ion-item>
+
+      <div style="text-align: right; margin-right: 10px;"><button ion-button end (click)="add(connectionForm.value, connectionForm.valid)">Add Connection</button></div>      
+       
+      <div >
+        <p class="connection-label">Select Server Name to connect:</p>
+      </div>
+      <ion-list radio-group>
+        <ion-item *ngFor="let item of serverList">
+          <ion-label>{{item}}</ion-label>
+          <ion-radio checked="false"></ion-radio>
+        </ion-item>
+      </ion-list>
+
+    </ion-list> 
+  </form>
+</ion-content>

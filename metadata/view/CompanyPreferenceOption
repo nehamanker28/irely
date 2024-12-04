@@ -1,0 +1,313 @@
+{
+    "type": "Ext.container.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mdcompanypreferenceoption",
+        "designer|userClassName": "CompanyPreferenceOption",
+        "height": 442,
+        "width": 574
+    },
+    "configAlternates": {
+        "controller": "object",
+        "activeTab": "auto",
+        "designer|initialView": "boolean",
+        "designer|userAlias": "string",
+        "designer|userClassName": "string",
+        "height": "auto",
+        "width": "auto"
+    },
+    "designerId": "5c6cf430-d938-4f3d-8045-751a6bcc964f",
+    "viewControllerInstanceId": "bd392ffc-b274-4daa-8a2d-e15e152aea3c",
+    "viewModelInstanceId": "45981a1f-4e25-42f1-820f-8cd02aed76c7",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "itemId": "tabConfiguration",
+                "layout": "vbox",
+                "title": "Configuration"
+            },
+            "configAlternates": {
+                "container|align": "string",
+                "itemId": "string",
+                "layout": "string",
+                "title": "string"
+            },
+            "name": "MyPanel",
+            "designerId": "08eeaab1-1296-4c90-b53e-d43a94f77ea1",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyPadding": 5,
+                        "height": 237,
+                        "padding": 10,
+                        "title": "Report Header"
+                    },
+                    "configAlternates": {
+                        "bodyPadding": "auto",
+                        "height": "auto",
+                        "padding": "auto",
+                        "title": "string"
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "2f5e0bb7-6d7f-4203-bbc3-f6870f6f9a6f",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Checkbox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "boxLabel": "(This will show the Logo setup under System Manager on the upper left corner of the reports)",
+                                "fieldLabel": "Show Logo",
+                                "itemId": "chkShowLogo",
+                                "labelWidth": 120
+                            },
+                            "configAlternates": {
+                                "boxLabel": "string",
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyCheckbox",
+                            "designerId": "dea8a648-15e1-4528-87a4-e8079bd51e81"
+                        },
+                        {
+                            "type": "Ext.form.RadioGroup",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "container|align": "stretch",
+                                "fieldLabel": "Company Contact",
+                                "itemId": "optCompanyContact",
+                                "labelWidth": 120,
+                                "layout": "vbox",
+                                "width": 400
+                            },
+                            "configAlternates": {
+                                "container|align": "string",
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number",
+                                "layout": "string",
+                                "width": "auto"
+                            },
+                            "name": "MyRadioGroup",
+                            "designerId": "a616da2f-a796-4e23-89f8-2d88f11a3931",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Location Specific",
+                                        "fieldLabel": null,
+                                        "itemId": "optLocationSpecific"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "itemId": "string"
+                                    },
+                                    "name": "MyRadio",
+                                    "designerId": "be10dc19-ce5a-4180-9efa-54b5eb3ad40f"
+                                },
+                                {
+                                    "type": "Ext.form.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fieldLabel": "Company Name",
+                                        "itemId": "txtCompanyName",
+                                        "labelPad": null,
+                                        "layout|flex": 1,
+                                        "padding": "0 0 0 20"
+                                    },
+                                    "configAlternates": {
+                                        "fieldLabel": "string",
+                                        "itemId": "string",
+                                        "labelPad": "number",
+                                        "layout|flex": "number",
+                                        "padding": "auto"
+                                    },
+                                    "name": "MyTextField",
+                                    "designerId": "e8f66e3f-200a-4709-9dc1-a274e3145dea"
+                                },
+                                {
+                                    "type": "Ext.form.field.Radio",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "boxLabel": "Company Wide",
+                                        "fieldLabel": null,
+                                        "itemId": "optCompanyWide"
+                                    },
+                                    "configAlternates": {
+                                        "boxLabel": "string",
+                                        "fieldLabel": "string",
+                                        "itemId": "string"
+                                    },
+                                    "name": "MyRadio1",
+                                    "designerId": "3ab1daba-f87c-4309-8b4b-6fdde67496f3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyPadding": 5,
+                        "padding": 10,
+                        "title": "Defaults"
+                    },
+                    "configAlternates": {
+                        "bodyPadding": "auto",
+                        "padding": "auto",
+                        "title": "string"
+                    },
+                    "name": "MyPanel2",
+                    "designerId": "7bf3a20e-e551-47f6-97b5-83a102feb90d",
+                    "cn": [
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Default New Customer No",
+                                "itemId": "txtDefaultCustomerNo",
+                                "labelWidth": 180
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyTextField1",
+                            "designerId": "e03d7b0f-0151-4cef-8d98-d5bc660d7979"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Default New Site No",
+                                "itemId": "txtDefaultSiteNo",
+                                "labelWidth": 180
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyTextField2",
+                            "designerId": "0cb67b0f-adfd-4e44-ba57-c284c237ad1c"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Hazardous Spill Clean-up Company Name",
+                                "itemId": "txtHazardousSpillCompanyName",
+                                "labelWidth": 180
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyTextField3",
+                            "designerId": "9960ee97-58e1-4f71-8dd0-33d59bb8d108"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Hazardous Spill Clean-up Company Phone Number",
+                                "itemId": "txtHazardousSpillCompanyPhoneNumber",
+                                "labelWidth": 180
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyTextField4",
+                            "designerId": "e390592e-6280-41b6-8412-250055156e2b"
+                        },
+                        {
+                            "type": "Ext.form.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fieldLabel": "Emergency Customer Code",
+                                "itemId": "txtEmergencyCustomerCode",
+                                "labelWidth": 180
+                            },
+                            "configAlternates": {
+                                "fieldLabel": "string",
+                                "itemId": "string",
+                                "labelWidth": "number"
+                            },
+                            "name": "MyTextField5",
+                            "designerId": "b636e6c0-5842-41dd-94e2-3044c68dfa04"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

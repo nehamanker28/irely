@@ -1,0 +1,469 @@
+[
+  {
+    "text": "iRely.TestFramework.WebApi",
+    "icon": "fa fa-folder",
+    "children": [
+      {
+        "text": "Budget",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "AddNewRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\Budget\\AddNewRecord.js",
+            "children": null
+          },
+          {
+            "text": "DuplicateRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\Budget\\DuplicateRecord.js",
+            "children": null
+          },
+          {
+            "text": "ExportRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\Budget\\ExportRecord.js",
+            "children": null
+          },
+          {
+            "text": "SearchAndOpenExistingRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\Budget\\SearchAndOpenExistingRecord.js",
+            "children": null
+          },
+          {
+            "text": "SearchScreen.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\Budget\\SearchScreen.js",
+            "children": null
+          },
+          {
+            "text": "Delete",
+            "icon": "fa fa-folder",
+            "link": null,
+            "children": [
+              {
+                "text": "DeleteRecord.js",
+                "icon": "fa fa-file-text-o",
+                "link": "..\\iRely.TestFramework.WebApi\\test-ui\\Budget\\Delete\\DeleteRecord.js",
+                "children": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "ColumnDesigner",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "AddNewRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ColumnDesigner\\AddNewRecord.js",
+            "children": null
+          },
+          {
+            "text": "DeleteRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ColumnDesigner\\DeleteRecord.js",
+            "children": null
+          },
+          {
+            "text": "DuplicateRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ColumnDesigner\\DuplicateRecord.js",
+            "children": null
+          },
+          {
+            "text": "ExportRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ColumnDesigner\\ExportRecord.js",
+            "children": null
+          },
+          {
+            "text": "SearchAndOpenExistingRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ColumnDesigner\\SearchAndOpenExistingRecord.js",
+            "children": null
+          },
+          {
+            "text": "SearchScreen.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ColumnDesigner\\SearchScreen.js",
+            "children": null
+          }
+        ]
+      },
+      {
+        "text": "ConsolidatedScripts",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "ConsolidatedScripts.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ConsolidatedScripts\\ConsolidatedScripts.js",
+            "children": null
+          },
+          {
+            "text": "VerifyReportDetails.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ConsolidatedScripts\\VerifyReportDetails.js",
+            "children": null
+          }
+        ]
+      },
+      {
+        "text": "FinancialReportGroup",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "AddNewRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\FinancialReportGroup\\AddNewRecord.js",
+            "children": null
+          },
+          {
+            "text": "AssignSegmentFilter.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\FinancialReportGroup\\AssignSegmentFilter.js",
+            "children": null
+          },
+          {
+            "text": "DeleteRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\FinancialReportGroup\\DeleteRecord.js",
+            "children": null
+          },
+          {
+            "text": "PrintReport.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\FinancialReportGroup\\PrintReport.js",
+            "children": null
+          },
+          {
+            "text": "SearchAndOpenExistingRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\FinancialReportGroup\\SearchAndOpenExistingRecord.js",
+            "children": null
+          },
+          {
+            "text": "SearchScreen.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\FinancialReportGroup\\SearchScreen.js",
+            "children": null
+          }
+        ]
+      },
+      {
+        "text": "FinancialReportViewer",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "AddNewRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\FinancialReportViewer\\AddNewRecord.js",
+            "children": null
+          },
+          {
+            "text": "PrintReport.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\FinancialReportViewer\\PrintReport.js",
+            "children": null
+          },
+          {
+            "text": "SaveRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\FinancialReportViewer\\SaveRecord.js",
+            "children": null
+          }
+        ]
+      },
+      {
+        "text": "ReportBuilder",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "AddNewRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportBuilder\\AddNewRecord.js",
+            "children": null
+          },
+          {
+            "text": "AssignSegmentFilter.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportBuilder\\AssignSegmentFilter.js",
+            "children": null
+          },
+          {
+            "text": "CustomHeaderAndFooter.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportBuilder\\CustomHeaderAndFooter.js",
+            "children": null
+          },
+          {
+            "text": "DeleteRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportBuilder\\DeleteRecord.js",
+            "children": null
+          },
+          {
+            "text": "DuplicateRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportBuilder\\DuplicateRecord.js",
+            "children": null
+          },
+          {
+            "text": "ExportReport.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportBuilder\\ExportReport.js",
+            "children": null
+          },
+          {
+            "text": "PrintReport.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportBuilder\\PrintReport.js",
+            "children": null
+          },
+          {
+            "text": "SearchAndOpenExistingRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportBuilder\\SearchAndOpenExistingRecord.js",
+            "children": null
+          },
+          {
+            "text": "SearchScreen.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportBuilder\\SearchScreen.js",
+            "children": null
+          }
+        ]
+      },
+      {
+        "text": "ReportHeaderAndFooter",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "AddNewRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportHeaderAndFooter\\AddNewRecord.js",
+            "children": null
+          },
+          {
+            "text": "DeleteRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportHeaderAndFooter\\DeleteRecord.js",
+            "children": null
+          },
+          {
+            "text": "DuplicateRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportHeaderAndFooter\\DuplicateRecord.js",
+            "children": null
+          },
+          {
+            "text": "SearchAndOpenExistingRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportHeaderAndFooter\\SearchAndOpenExistingRecord.js",
+            "children": null
+          },
+          {
+            "text": "SearchScreen.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportHeaderAndFooter\\SearchScreen.js",
+            "children": null
+          }
+        ]
+      },
+      {
+        "text": "ReportTemplate",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "BalanceSheet.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportTemplate\\BalanceSheet.js",
+            "children": null
+          },
+          {
+            "text": "GenerateTemplates.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportTemplate\\GenerateTemplates.js",
+            "children": null
+          },
+          {
+            "text": "TrialBalance.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\ReportTemplate\\TrialBalance.js",
+            "children": null
+          }
+        ]
+      },
+      {
+        "text": "RowDesigner",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "AddNewRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\RowDesigner\\AddNewRecord.js",
+            "children": null
+          },
+          {
+            "text": "DeleteRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\RowDesigner\\DeleteRecord.js",
+            "children": null
+          },
+          {
+            "text": "DuplicateRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\RowDesigner\\DuplicateRecord.js",
+            "children": null
+          },
+          {
+            "text": "ExportRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\RowDesigner\\ExportRecord.js",
+            "children": null
+          },
+          {
+            "text": "GenerateAndShowHideRows.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\RowDesigner\\GenerateAndShowHideRows.js",
+            "children": null
+          },
+          {
+            "text": "SearchAndOpenExistingRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\RowDesigner\\SearchAndOpenExistingRecord.js",
+            "children": null
+          },
+          {
+            "text": "SearchScreen.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\RowDesigner\\SearchScreen.js",
+            "children": null
+          },
+          {
+            "text": "UpdateRecord.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\RowDesigner\\UpdateRecord.js",
+            "children": null
+          }
+        ]
+      },
+      {
+        "text": "TDD",
+        "icon": "fa fa-folder",
+        "link": null,
+        "children": [
+          {
+            "text": "clickButton.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\clickButton.js",
+            "children": null
+          },
+          {
+            "text": "clickGridCheckBox.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\clickGridCheckBox.js",
+            "children": null
+          },
+          {
+            "text": "clickTitleBarButton.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\clickTitleBarButton.js",
+            "children": null
+          },
+          {
+            "text": "DummyRows.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\DummyRows.js",
+            "children": null
+          },
+          {
+            "text": "EnterDummyRowData.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\EnterDummyRowData.js",
+            "children": null
+          },
+          {
+            "text": "enterGridData.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\enterGridData.js",
+            "children": null
+          },
+          {
+            "text": "enterScreenData.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\enterScreenData.js",
+            "children": null
+          },
+          {
+            "text": "filterGridRecords.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\filterGridRecords.js",
+            "children": null
+          },
+          {
+            "text": "scrollHorizontallyTo.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\scrollHorizontallyTo.js",
+            "children": null
+          },
+          {
+            "text": "selectComboBoxRowValue.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\selectComboBoxRowValue.js",
+            "children": null
+          },
+          {
+            "text": "selectGridComboBoxRowValue.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\selectGridComboBoxRowValue.js",
+            "children": null
+          },
+          {
+            "text": "selectSearchRowByRange.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\selectSearchRowByRange.js",
+            "children": null
+          },
+          {
+            "text": "selectSearchRowValue.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\selectSearchRowValue.js",
+            "children": null
+          },
+          {
+            "text": "verifyFieldLabel.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\verifyFieldLabel.js",
+            "children": null
+          },
+          {
+            "text": "verifyGridColumnNames.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\verifyGridColumnNames.js",
+            "children": null
+          },
+          {
+            "text": "verifyGridData.js",
+            "icon": "fa fa-file-text-o",
+            "link": "..\\iRely.TestFramework.WebApi\\test-ui\\TDD\\verifyGridData.js",
+            "children": null
+          }
+        ]
+      }
+    ]
+  }
+]

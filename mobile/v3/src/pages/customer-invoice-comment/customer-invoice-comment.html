@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="white" class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-8 style="margin-right: 5px; color: black">
+          <h3>Add Comment</h3>
+        </ion-col>
+        <ion-col col-auto></ion-col>
+        <ion-col col-3.5>
+          <button ion-button block large primary (click)="Okay()" class="button-global"> Ok </button>          
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content padding>
+  <ion-textarea rows="20" placeholder="Enter a comment" [(ngModel)]="comment" style="border: green; border-style: solid; border-width: thin;"></ion-textarea>
+</ion-content>

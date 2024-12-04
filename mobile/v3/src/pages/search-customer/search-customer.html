@@ -1,0 +1,89 @@
+<ion-header>  
+
+  <ion-toolbar color="white" class="my-toolbar box-shadow" >
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-8.5 style="margin-right: 5px;">
+          <ion-searchbar [(ngModel)]="searchValue" (ionInput)="getCustomerList()"></ion-searchbar>
+        </ion-col>
+        <ion-col col-auto></ion-col>
+        <ion-col col-3 style="margin-right: 5px;">
+          <button ion-button block large primary (click)="selectCustomer()" class="button-global">Select</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-scroll scrollX="true" [ngStyle]="{'height':dynamicScrollHeight}">
+    <ion-list [ngStyle]="{'width':dynamicScrollWidth}">
+      <ion-row>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px" hidden="hidden">
+          <ion-item>
+            <ion-label><b>Entity Id</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 100px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Customer No</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Customer Name</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Address</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 100px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>City, State</b></ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 100px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label><b>Zip Code</b></ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let item of data">
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px" hidden="hidden">
+          <ion-item>
+            <ion-label>{{item.intEntityId}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 100px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-checkbox color="primary" [(ngModel)]="item['ysnSelected']" (click)="selectItem(item)"></ion-checkbox>
+            <ion-label>{{item.strCustomerNumber}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strCustomerName}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 200px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strBillToAddress}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 100px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strBillToCity}}, {{item.strBillToState}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="width: 100px !important; padding: 5px 0px 5px 0px">
+          <ion-item>
+            <ion-label>{{item.strBillToZipCode}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-scroll>
+</ion-content>

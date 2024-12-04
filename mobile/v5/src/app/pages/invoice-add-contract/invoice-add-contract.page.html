@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">{{customerName}}</ion-title>
+    <ion-button slot="end" primary (click)="closeContract()">Ok</ion-button>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row style="font-weight: bold; margin-bottom: 10px; margin-top: 5px;">
+    <ion-col size="3">
+      Contract Number
+    </ion-col>
+    <ion-col size="2">
+      Contract Type
+    </ion-col>
+    <ion-col size="3">
+      Contract Date
+    </ion-col>
+    <ion-col size="2">
+      Item No
+    </ion-col>
+    <ion-col size="2">
+      Quantity
+    </ion-col>    
+  </ion-row>
+  <ion-row *ngFor="let contract of contracts">
+    <ion-col size="3">
+      <ion-checkbox color="primary" [(ngModel)]="contract['ysnSelected']" (click)="selectContract(contract)"></ion-checkbox> &nbsp;&nbsp;
+      {{contract.strContractNumber}}
+    </ion-col>
+    <ion-col size="2">
+      {{contract.strType}}
+    </ion-col>
+    <ion-col size="3">
+      {{contract.dtmStartDate |  date:'MM/dd/yyyy'}}
+    </ion-col>
+    <ion-col size="2">
+      {{contract.strItemNo}}
+    </ion-col>
+    <ion-col size="2">
+      {{contract.dblQuantity | number : '1.2-2'}}
+    </ion-col>    
+  </ion-row>
+</ion-grid>
+</ion-content>
